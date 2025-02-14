@@ -9,19 +9,33 @@
 
 #define LCDdataPort     PORTB
 #define LCDdataPortDIR  TRISB
-#define Epin            PORTCbits.RC2
-#define EpinDIR         TRISCbits.TRISC2
 #define RSpin           PORTCbits.RC0
 #define RSpinDIR        TRISCbits.TRISC0
 #define RWpin           PORTCbits.RC1
 #define RWpinDIR        TRISCbits.TRISC1
+#define Epin            PORTCbits.RC2
+#define EpinDIR         TRISCbits.TRISC2
+#define buttonRowA      PORTDbits.RD0
+#define buttonRowADIR   TRISDbits.TRISD0
+#define buttonRowB      PORTDbits.RD1
+#define buttonRowBDIR   TRISDbits.TRISD1
+#define buttonRowC      PORTDbits.RD2
+#define buttonRowCDIR   TRISDbits.TRISD2
+#define buttonRowD      PORTDbits.RD3
+#define buttonRowDDIR   TRISDbits.TRISD3
+#define buttonCol1      PORTDbits.RD4
+#define buttonCol1DIR   TRISDbits.TRISD4
+#define buttonCol2      PORTDbits.RD5
+#define buttonCol2DIR   TRISDbits.TRISD5
+#define buttonCol3      PORTDbits.RD6
+#define buttonCol3DIR   TRISDbits.TRISD6
+#define buttonCol4      PORTDbits.RD7
+#define buttonCol4DIR   TRISDbits.TRISD7
 
 //*****************************************
 
 #define _XTAL_FREQ 20000000
 #include<xc.h>
-#include<stdlib.h>
-#include<stdio.h>
 #include<string.h>
 
 void toggleEnable(){
@@ -52,7 +66,22 @@ void selectRow(uint16_t row){
     }
 }
 
-void main(){
+int main(){
+//Initialization of ports and pins
+    
+    buttonRowADIR = 1;
+    buttonRowBDIR = 1;
+    buttonRowCDIR = 1;
+    buttonRowDDIR = 1;
+    buttonCol1DIR = 0;
+    buttonCol2DIR = 0;
+    buttonCol3DIR = 0;
+    buttonCol4DIR = 0;
+    buttonCol1 = 0;
+    buttonCol2 = 0;
+    buttonCol3 = 0;
+    buttonCol4 = 0;
+
 //LCD initialization
     
     LCDdataPortDIR = 0x00;
@@ -73,8 +102,6 @@ void main(){
 //Initialization of variables
     
     uint8_t line[16];
-    
-//Main loop
 
     while(1){
         
