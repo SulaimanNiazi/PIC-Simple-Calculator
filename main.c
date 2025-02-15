@@ -106,7 +106,7 @@ int main(){
 
 //Initialization of variables
     
-    uint8_t line[16],  operator = '\0', numEntries = 0;
+    uint8_t line[16],  operator = '+', numEntries = 0;
     float entry[2] = {0, 0};
 
     while(1){
@@ -141,7 +141,7 @@ int main(){
                 sendCommand(0x01);
                 memset(entry, 0, sizeof(entry));
                 numEntries = 0;
-                operator = '\0';
+                operator = '+';
                 __delay_ms(300);
             }
         }
@@ -228,7 +228,7 @@ int main(){
                 selectRow(1);
                 memset(entry, 0, sizeof(entry));
                 numEntries = 0;
-                operator = '\0';
+                operator = '+';
                 __delay_ms(300);
             }
         }
