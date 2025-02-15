@@ -40,6 +40,7 @@
 #include <string.h>
 #include <builtins.h>
 #include <stdint.h>
+#include <stdio.h>
 
 void toggleEnable(){
     Epin = 1;
@@ -101,148 +102,180 @@ int main(){
     sendCommand(0x01);
     sendCommand(0x06);
     sendCommand(0x0F);
-    
+    selectRow(1);
+
 //Initialization of variables
     
-    uint8_t line[16],  operator;
-    float num1 = 0, num2 = 0;
+    uint8_t line[16],  operator = '\0', numEntries = 0;
+    float entry[2] = {0, 0};
 
     while(1){
-        selectRow(1);
-        operator = '\0';
-        while(!operator){
-            buttonCol1 = 1;
+        buttonCol1 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
             if(buttonRowA){
-                __delay_ms(10);
-                if(buttonRowA){
-                    LCDdisplay("7");
-                    __delay_ms(300);
-                }
+                LCDdisplay("7");
+                entry[numEntries] = entry[numEntries] * 10 + 7;
+                __delay_ms(300);
             }
-            else if(buttonRowB){
-                __delay_ms(10);
-                if(buttonRowB){
-                    LCDdisplay("4");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowC){
-                __delay_ms(10);
-                if(buttonRowC){
-                    LCDdisplay("1");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowD){ //  C/on
-                __delay_ms(10);
-                if(buttonRowD){
-                    sendCommand(0x01);
-                    __delay_ms(300);
-                }
-            }
-            else{
-                __delay_ms(1);
-            }
-            buttonCol1 = 0;
-            buttonCol2 = 1;
-            if(buttonRowA){
-                __delay_ms(10);
-                if(buttonRowA){
-                    LCDdisplay("8");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowB){
-                __delay_ms(10);
-                if(buttonRowB){
-                    LCDdisplay("5");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowC){
-                __delay_ms(10);
-                if(buttonRowC){
-                    LCDdisplay("2");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowD){
-                __delay_ms(10);
-                if(buttonRowD){
-                    LCDdisplay("0");
-                    __delay_ms(300);
-                }
-            }
-            else{
-                __delay_ms(1);
-            }
-            buttonCol2 = 0;
-            buttonCol3 = 1;
-            if(buttonRowA){
-                __delay_ms(10);
-                if(buttonRowA){
-                    LCDdisplay("9");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowB){
-                __delay_ms(10);
-                if(buttonRowB){
-                    LCDdisplay("6");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowC){
-                __delay_ms(10);
-                if(buttonRowC){
-                    LCDdisplay("3");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowD){ // = equals
-                __delay_ms(10);
-                if(buttonRowD){
-                    sendCommand(0x01);
-                    __delay_ms(300);
-                }
-            }
-            else{
-                __delay_ms(1);
-            }
-            buttonCol3 = 0;
-            buttonCol4 = 1;
-            if(buttonRowA){
-                __delay_ms(10);
-                if(buttonRowA){
-                    LCDdisplay("/");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowB){
-                __delay_ms(10);
-                if(buttonRowB){
-                    LCDdisplay("x");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowC){
-                __delay_ms(10);
-                if(buttonRowC){
-                    LCDdisplay("-");
-                    __delay_ms(300);
-                }
-            }
-            else if(buttonRowD){
-                __delay_ms(10);
-                if(buttonRowD){
-                    LCDdisplay("+");
-                    __delay_ms(300);
-                }
-            }
-            else{
-                __delay_ms(1);
-            }
-            buttonCol4 = 0;
         }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                LCDdisplay("4");
+                entry[numEntries] = entry[numEntries] * 10 + 4;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                LCDdisplay("1");
+                entry[numEntries] = entry[numEntries] * 10 + 1;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowD){ //  C/on Clear button
+            __delay_ms(10);
+            if(buttonRowD){
+                sendCommand(0x01);
+                memset(entry, 0, sizeof(entry));
+                numEntries = 0;
+                operator = '\0';
+                __delay_ms(300);
+            }
+        }
+        else{
+            __delay_ms(1);
+        }
+        buttonCol1 = 0;
+        buttonCol2 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                LCDdisplay("8");
+                entry[numEntries] = entry[numEntries] * 10 + 8;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                LCDdisplay("5");
+                entry[numEntries] = entry[numEntries] * 10 + 5;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                LCDdisplay("2");
+                entry[numEntries] = entry[numEntries] * 10 + 2;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowD){
+            __delay_ms(10);
+            if(buttonRowD){
+                LCDdisplay("0");
+                entry[numEntries] = entry[numEntries] * 10;
+                __delay_ms(300);
+            }
+        }
+        else{
+            __delay_ms(1);
+        }
+        buttonCol2 = 0;
+        buttonCol3 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                LCDdisplay("9");
+                entry[numEntries] = entry[numEntries] * 10 + 9;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                LCDdisplay("6");
+                entry[numEntries] = entry[numEntries] * 10 + 6;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                LCDdisplay("3");
+                entry[numEntries] = entry[numEntries] * 10 + 3;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowD){ // = equals button
+            __delay_ms(10);
+            if(buttonRowD){
+                float ans;
+                switch(operator){
+                    case '+': ans = entry[0] + entry[1]; break;
+                    case '-': ans = entry[0] - entry[1]; break;
+                    case '*': ans = entry[0] * entry[1]; break;
+                    case '/': ans = entry[0] / entry[1]; break;
+                }
+                char output[16];
+                sprintf(output, "%f", ans);
+                selectRow(2);
+                LCDdisplay(output);
+                selectRow(1);
+                memset(entry, 0, sizeof(entry));
+                numEntries = 0;
+                operator = '\0';
+                __delay_ms(300);
+            }
+        }
+        else{
+            __delay_ms(1);
+        }
+        buttonCol3 = 0;
+        buttonCol4 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                LCDdisplay("/");
+                operator = '/';
+                numEntries++;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                LCDdisplay("x");
+                operator = '*';
+                numEntries++;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                LCDdisplay("-");
+                operator = '-';
+                numEntries++;
+                __delay_ms(300);
+            }
+        }
+        else if(buttonRowD){
+            __delay_ms(10);
+            if(buttonRowD){
+                LCDdisplay("+");
+                operator = '+';
+                numEntries++;
+                __delay_ms(300);
+            }
+        }
+        else{
+            __delay_ms(1);
+        }
+        buttonCol4 = 0;
     }
 }
