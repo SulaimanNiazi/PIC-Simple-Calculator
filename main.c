@@ -7,6 +7,8 @@
 
 //*******Defining ports and pins***********
 
+#include <builtins.h>
+#include <stdint.h>
 #define LCDdataPort     PORTB
 #define LCDdataPortDIR  TRISB
 #define RSpin           PORTCbits.RC0
@@ -15,6 +17,7 @@
 #define RWpinDIR        TRISCbits.TRISC1
 #define Epin            PORTCbits.RC2
 #define EpinDIR         TRISCbits.TRISC2
+
 #define buttonRowA      PORTDbits.RD0
 #define buttonRowADIR   TRISDbits.TRISD0
 #define buttonRowB      PORTDbits.RD1
@@ -50,12 +53,12 @@ void sendCommand(uint8_t command){
     LCDdataPort = command;
     toggleEnable();
 }
-void LCDdisplay(uint8_t line[]){
+void LCDdisplay(char sentence[]){
     RSpin = 1;
     RWpin = 0;
-    uint16_t lineLength = strlen((char*)line) + 1;
+    uint16_t lineLength = strlen(sentence);
     for(uint16_t ind = 0; ind < lineLength; ind++){
-        LCDdataPort = line[ind];
+        LCDdataPort = (uint8_t)sentence[ind];
         toggleEnable();
     }
 }
@@ -101,9 +104,52 @@ int main(){
     
 //Initialization of variables
     
-    uint8_t line[16];
+    uint8_t line[16],  operator;
+    float num1, num2;
 
     while(1){
-        
+        selectRow(1);
+        operator = '\0';
+        while(!operator){
+            buttonCol1 = 1;
+            if(buttonRowA){
+                __delay_ms(10);
+                if(buttonRowA){
+                    LCDdisplay("7");
+                    while(buttonRowA);
+                }
+            }
+            else if(buttonRowB){
+                __delay_ms(10);
+                if(buttonRowB){
+                    LCDdisplay("4");
+                    while(buttonRowB);
+                }
+            }
+            else if(buttonRowC){
+                __delay_ms(10);
+                if(buttonRowC){
+                    LCDdisplay("1");
+                    while(buttonRowC);
+                }
+            }
+            else if(buttonRowD){
+                __delay_ms(10);
+                if(buttonRowD){
+                    sendCommand(0x01);
+                    while(buttonRowD);
+                }
+            }
+            buttonCol1 = 0;
+            buttonCol2 = 1;
+            __delay_us(500);
+            buttonCol2 = 0;
+            buttonCol3 = 1;
+            __delay_us(500);
+            buttonCol3 = 0;
+            buttonCol4 = 1;
+            __delay_us(500);
+            buttonCol4 = 0;
+        }
     }
 }
