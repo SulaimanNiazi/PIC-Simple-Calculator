@@ -7,8 +7,6 @@
 
 //*******Defining ports and pins***********
 
-#include <builtins.h>
-#include <stdint.h>
 #define LCDdataPort     PORTB
 #define LCDdataPortDIR  TRISB
 #define RSpin           PORTCbits.RC0
@@ -38,8 +36,10 @@
 //*****************************************
 
 #define _XTAL_FREQ 20000000
-#include<xc.h>
-#include<string.h>
+#include <xc.h>
+#include <string.h>
+#include <builtins.h>
+#include <stdint.h>
 
 void toggleEnable(){
     Epin = 1;
@@ -105,7 +105,7 @@ int main(){
 //Initialization of variables
     
     uint8_t line[16],  operator;
-    float num1, num2;
+    float num1 = 0, num2 = 0;
 
     while(1){
         selectRow(1);
@@ -116,39 +116,132 @@ int main(){
                 __delay_ms(10);
                 if(buttonRowA){
                     LCDdisplay("7");
-                    while(buttonRowA);
+                    __delay_ms(300);
                 }
             }
             else if(buttonRowB){
                 __delay_ms(10);
                 if(buttonRowB){
                     LCDdisplay("4");
-                    while(buttonRowB);
+                    __delay_ms(300);
                 }
             }
             else if(buttonRowC){
                 __delay_ms(10);
                 if(buttonRowC){
                     LCDdisplay("1");
-                    while(buttonRowC);
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowD){ //  C/on
+                __delay_ms(10);
+                if(buttonRowD){
+                    sendCommand(0x01);
+                    __delay_ms(300);
+                }
+            }
+            else{
+                __delay_ms(1);
+            }
+            buttonCol1 = 0;
+            buttonCol2 = 1;
+            if(buttonRowA){
+                __delay_ms(10);
+                if(buttonRowA){
+                    LCDdisplay("8");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowB){
+                __delay_ms(10);
+                if(buttonRowB){
+                    LCDdisplay("5");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowC){
+                __delay_ms(10);
+                if(buttonRowC){
+                    LCDdisplay("2");
+                    __delay_ms(300);
                 }
             }
             else if(buttonRowD){
                 __delay_ms(10);
                 if(buttonRowD){
-                    sendCommand(0x01);
-                    while(buttonRowD);
+                    LCDdisplay("0");
+                    __delay_ms(300);
                 }
             }
-            buttonCol1 = 0;
-            buttonCol2 = 1;
-            __delay_us(500);
+            else{
+                __delay_ms(1);
+            }
             buttonCol2 = 0;
             buttonCol3 = 1;
-            __delay_us(500);
+            if(buttonRowA){
+                __delay_ms(10);
+                if(buttonRowA){
+                    LCDdisplay("9");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowB){
+                __delay_ms(10);
+                if(buttonRowB){
+                    LCDdisplay("6");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowC){
+                __delay_ms(10);
+                if(buttonRowC){
+                    LCDdisplay("3");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowD){ // = equals
+                __delay_ms(10);
+                if(buttonRowD){
+                    sendCommand(0x01);
+                    __delay_ms(300);
+                }
+            }
+            else{
+                __delay_ms(1);
+            }
             buttonCol3 = 0;
             buttonCol4 = 1;
-            __delay_us(500);
+            if(buttonRowA){
+                __delay_ms(10);
+                if(buttonRowA){
+                    LCDdisplay("/");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowB){
+                __delay_ms(10);
+                if(buttonRowB){
+                    LCDdisplay("x");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowC){
+                __delay_ms(10);
+                if(buttonRowC){
+                    LCDdisplay("-");
+                    __delay_ms(300);
+                }
+            }
+            else if(buttonRowD){
+                __delay_ms(10);
+                if(buttonRowD){
+                    LCDdisplay("+");
+                    __delay_ms(300);
+                }
+            }
+            else{
+                __delay_ms(1);
+            }
             buttonCol4 = 0;
         }
     }
