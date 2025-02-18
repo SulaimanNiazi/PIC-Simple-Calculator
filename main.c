@@ -75,7 +75,7 @@ void setDigit(char *string, char *digit){
     __delay_ms(300);
 }
 char* getInput(){
-    __delay_ms(300);
+    __delay_ms(500);
     while(1){
         buttonCol1 = 1;
         if(buttonRowA){
@@ -254,7 +254,14 @@ int main(){
             break;
 
             default:
-            setDigit(input, *newInput);
+            if(strlen(input) < 16){
+                setDigit(input, *newInput);
+            }
+            else{
+                selectRow(2);
+                LCDdisplay("Limit reached.");
+                selectRow(1);
+            }
         }
     }
 }
