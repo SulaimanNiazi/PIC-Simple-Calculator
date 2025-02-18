@@ -12,6 +12,7 @@ Simulation/*
 
 Makefile
 *.code-workspace
+**/[Tt]est.*
 
 # Exceptions
 
