@@ -69,6 +69,12 @@ void selectRow(uint16_t row){
     }
 }
 
+void setDigit(char *string, char *digit){
+    LCDdisplay(digit);
+    strcat(string, digit);
+    __delay_ms(300);
+}
+
 int main(){
 //Initialization of ports and pins
     
@@ -112,25 +118,19 @@ int main(){
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                LCDdisplay("7");
-                strcat(input, "7");
-                __delay_ms(300);
+                setDigit(input, "7");
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                LCDdisplay("4");
-                strcat(input, "4");
-                __delay_ms(300);
+                setDigit(input, "4");
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                LCDdisplay("1");
-                strcat(input, "1");
-                __delay_ms(300);
+                setDigit(input, "1");
             }
         }
         else if(buttonRowD){ //  C/on Clear button
@@ -149,33 +149,25 @@ int main(){
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                LCDdisplay("8");
-                strcat(input, "8");
-                __delay_ms(300);
+                setDigit(input, "8");
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                LCDdisplay("5");
-                strcat(input, "5");
-                __delay_ms(300);
+                setDigit(input, "5");
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                LCDdisplay("2");
-                strcat(input, "2");
-                __delay_ms(300);
+                setDigit(input, "2");
             }
         }
         else if(buttonRowD){
             __delay_ms(10);
             if(buttonRowD){
-                LCDdisplay("0");
-                strcat(input, "0");
-                __delay_ms(300);
+                setDigit(input, "0");
             }
         }
         else{
@@ -186,25 +178,19 @@ int main(){
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                LCDdisplay("9");
-                strcat(input, "9");
-                __delay_ms(300);
+                setDigit(input, "9");
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                LCDdisplay("6");
-                strcat(input, "6");
-                __delay_ms(300);
+                setDigit(input, "6");
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                LCDdisplay("3");
-                strcat(input, "3");
-                __delay_ms(300);
+                setDigit(input, "3");
             }
         }
         else if(buttonRowD){ // = equals button
@@ -228,33 +214,25 @@ int main(){
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                LCDdisplay("/");
-                strcat(input, "/");
-                __delay_ms(300);
+                setDigit(input, "/");
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                LCDdisplay("x");
-                strcat(input, "x");
-                __delay_ms(300);
+                setDigit(input, "x");
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                LCDdisplay("-");
-                strcat(input, "-");
-                __delay_ms(300);
+                setDigit(input, "-");
             }
         }
         else if(buttonRowD){
             __delay_ms(10);
             if(buttonRowD){
-                LCDdisplay("+");
-                strcat(input, "+");
-                __delay_ms(300);
+                setDigit(input, "+");
             }
         }
         else{
