@@ -74,6 +74,127 @@ void setDigit(char *string, char *digit){
     strcat(string, digit);
     __delay_ms(300);
 }
+char* getInput(){
+    __delay_ms(300);
+    while(1){
+        buttonCol1 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                return "7";
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                return "4";
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                return "1";
+            }
+        }
+        else if(buttonRowD){ //  C/on Clear button
+            __delay_ms(10);
+            if(buttonRowD){
+                return "C";
+            }
+        }
+        else{
+            __delay_ms(10);
+        }
+        buttonCol1 = 0;
+        buttonCol2 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                return "8";
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                return "5";
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                return "2";
+            }
+        }
+        else if(buttonRowD){
+            __delay_ms(10);
+            if(buttonRowD){
+                return "0";
+            }
+        }
+        else{
+            __delay_ms(10);
+        }
+        buttonCol2 = 0;
+        buttonCol3 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                return "9";
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                return "6";
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                return "3";
+            }
+        }
+        else if(buttonRowD){ // = equals button
+            __delay_ms(10);
+            if(buttonRowD){
+                return "=";
+            }
+        }
+        else{
+            __delay_ms(10);
+        }
+        buttonCol3 = 0;
+        buttonCol4 = 1;
+        if(buttonRowA){
+            __delay_ms(10);
+            if(buttonRowA){
+                return "/";
+            }
+        }
+        else if(buttonRowB){
+            __delay_ms(10);
+            if(buttonRowB){
+                return "x";
+            }
+        }
+        else if(buttonRowC){
+            __delay_ms(10);
+            if(buttonRowC){
+                return "-";
+            }
+        }
+        else if(buttonRowD){
+            __delay_ms(10);
+            if(buttonRowD){
+                return "+";
+            }
+        }
+        else{
+            __delay_ms(10);
+        }
+        buttonCol4 = 0;
+    }
+}
 
 int main(){
 //Initialization of ports and pins
@@ -111,133 +232,29 @@ int main(){
 
 //Initialization of variables
     
-    char input[16] = "";
+    char input[16] = "", equation[16], output[16];
 
     while(1){
-        buttonCol1 = 1;
-        if(buttonRowA){
-            __delay_ms(10);
-            if(buttonRowA){
-                setDigit(input, "7");
-            }
+        char *newInput[1];
+        *newInput = getInput();
+        switch(*newInput[0]){
+            case '=':
+            strcpy(equation, "0+");
+            strcat(equation, input);
+            strcpy(output, equation);
+            selectRow(2);
+            LCDdisplay(output);
+            selectRow(1);
+            memset(input, 0, sizeof(input));
+            break;
+
+            case 'C':
+            sendCommand(0x01);
+            memset(input, 0, sizeof(input));
+            break;
+
+            default:
+            setDigit(input, *newInput);
         }
-        else if(buttonRowB){
-            __delay_ms(10);
-            if(buttonRowB){
-                setDigit(input, "4");
-            }
-        }
-        else if(buttonRowC){
-            __delay_ms(10);
-            if(buttonRowC){
-                setDigit(input, "1");
-            }
-        }
-        else if(buttonRowD){ //  C/on Clear button
-            __delay_ms(10);
-            if(buttonRowD){
-                sendCommand(0x01);
-                memset(input, 0, sizeof(input));
-                __delay_ms(300);
-            }
-        }
-        else{
-            __delay_ms(10);
-        }
-        buttonCol1 = 0;
-        buttonCol2 = 1;
-        if(buttonRowA){
-            __delay_ms(10);
-            if(buttonRowA){
-                setDigit(input, "8");
-            }
-        }
-        else if(buttonRowB){
-            __delay_ms(10);
-            if(buttonRowB){
-                setDigit(input, "5");
-            }
-        }
-        else if(buttonRowC){
-            __delay_ms(10);
-            if(buttonRowC){
-                setDigit(input, "2");
-            }
-        }
-        else if(buttonRowD){
-            __delay_ms(10);
-            if(buttonRowD){
-                setDigit(input, "0");
-            }
-        }
-        else{
-            __delay_ms(10);
-        }
-        buttonCol2 = 0;
-        buttonCol3 = 1;
-        if(buttonRowA){
-            __delay_ms(10);
-            if(buttonRowA){
-                setDigit(input, "9");
-            }
-        }
-        else if(buttonRowB){
-            __delay_ms(10);
-            if(buttonRowB){
-                setDigit(input, "6");
-            }
-        }
-        else if(buttonRowC){
-            __delay_ms(10);
-            if(buttonRowC){
-                setDigit(input, "3");
-            }
-        }
-        else if(buttonRowD){ // = equals button
-            __delay_ms(10);
-            if(buttonRowD){
-                char equation[18] = "0+", output[16];
-                strcat(equation, input);
-                strcpy(output, equation);
-                selectRow(2);
-                LCDdisplay(output);
-                selectRow(1);
-                memset(input, 0, sizeof(input));
-                __delay_ms(300);
-            }
-        }
-        else{
-            __delay_ms(10);
-        }
-        buttonCol3 = 0;
-        buttonCol4 = 1;
-        if(buttonRowA){
-            __delay_ms(10);
-            if(buttonRowA){
-                setDigit(input, "/");
-            }
-        }
-        else if(buttonRowB){
-            __delay_ms(10);
-            if(buttonRowB){
-                setDigit(input, "x");
-            }
-        }
-        else if(buttonRowC){
-            __delay_ms(10);
-            if(buttonRowC){
-                setDigit(input, "-");
-            }
-        }
-        else if(buttonRowD){
-            __delay_ms(10);
-            if(buttonRowD){
-                setDigit(input, "+");
-            }
-        }
-        else{
-            __delay_ms(10);
-        }
-        buttonCol4 = 0;
     }
 }
