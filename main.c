@@ -40,7 +40,6 @@
 #include <string.h>
 #include <builtins.h>
 #include <stdint.h>
-#include <stdio.h>
 
 void toggleEnable(){
     Epin = 1;
@@ -106,8 +105,7 @@ int main(){
 
 //Initialization of variables
     
-    uint8_t line[16],  operator = '+', numEntries = 0;
-    float entry[2] = {0, 0};
+    char input[16] = "";
 
     while(1){
         buttonCol1 = 1;
@@ -115,7 +113,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowA){
                 LCDdisplay("7");
-                entry[numEntries] = entry[numEntries] * 10 + 7;
+                strcat(input, "7");
                 __delay_ms(300);
             }
         }
@@ -123,7 +121,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowB){
                 LCDdisplay("4");
-                entry[numEntries] = entry[numEntries] * 10 + 4;
+                strcat(input, "4");
                 __delay_ms(300);
             }
         }
@@ -131,7 +129,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowC){
                 LCDdisplay("1");
-                entry[numEntries] = entry[numEntries] * 10 + 1;
+                strcat(input, "1");
                 __delay_ms(300);
             }
         }
@@ -139,14 +137,12 @@ int main(){
             __delay_ms(10);
             if(buttonRowD){
                 sendCommand(0x01);
-                memset(entry, 0, sizeof(entry));
-                numEntries = 0;
-                operator = '+';
+                memset(input, 0, sizeof(input));
                 __delay_ms(300);
             }
         }
         else{
-            __delay_ms(1);
+            __delay_ms(10);
         }
         buttonCol1 = 0;
         buttonCol2 = 1;
@@ -154,7 +150,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowA){
                 LCDdisplay("8");
-                entry[numEntries] = entry[numEntries] * 10 + 8;
+                strcat(input, "8");
                 __delay_ms(300);
             }
         }
@@ -162,7 +158,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowB){
                 LCDdisplay("5");
-                entry[numEntries] = entry[numEntries] * 10 + 5;
+                strcat(input, "5");
                 __delay_ms(300);
             }
         }
@@ -170,7 +166,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowC){
                 LCDdisplay("2");
-                entry[numEntries] = entry[numEntries] * 10 + 2;
+                strcat(input, "2");
                 __delay_ms(300);
             }
         }
@@ -178,12 +174,12 @@ int main(){
             __delay_ms(10);
             if(buttonRowD){
                 LCDdisplay("0");
-                entry[numEntries] = entry[numEntries] * 10;
+                strcat(input, "0");
                 __delay_ms(300);
             }
         }
         else{
-            __delay_ms(1);
+            __delay_ms(10);
         }
         buttonCol2 = 0;
         buttonCol3 = 1;
@@ -191,7 +187,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowA){
                 LCDdisplay("9");
-                entry[numEntries] = entry[numEntries] * 10 + 9;
+                strcat(input, "9");
                 __delay_ms(300);
             }
         }
@@ -199,7 +195,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowB){
                 LCDdisplay("6");
-                entry[numEntries] = entry[numEntries] * 10 + 6;
+                strcat(input, "6");
                 __delay_ms(300);
             }
         }
@@ -207,33 +203,25 @@ int main(){
             __delay_ms(10);
             if(buttonRowC){
                 LCDdisplay("3");
-                entry[numEntries] = entry[numEntries] * 10 + 3;
+                strcat(input, "3");
                 __delay_ms(300);
             }
         }
         else if(buttonRowD){ // = equals button
             __delay_ms(10);
             if(buttonRowD){
-                float ans;
-                switch(operator){
-                    case '+': ans = entry[0] + entry[1]; break;
-                    case '-': ans = entry[0] - entry[1]; break;
-                    case '*': ans = entry[0] * entry[1]; break;
-                    case '/': ans = entry[0] / entry[1]; break;
-                }
-                char output[16];
-                sprintf(output, "%f", ans);
+                char equation[18] = "0+", output[16];
+                strcat(equation, input);
+                strcpy(output, equation);
                 selectRow(2);
                 LCDdisplay(output);
                 selectRow(1);
-                memset(entry, 0, sizeof(entry));
-                numEntries = 0;
-                operator = '+';
+                memset(input, 0, sizeof(input));
                 __delay_ms(300);
             }
         }
         else{
-            __delay_ms(1);
+            __delay_ms(10);
         }
         buttonCol3 = 0;
         buttonCol4 = 1;
@@ -241,8 +229,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowA){
                 LCDdisplay("/");
-                operator = '/';
-                numEntries++;
+                strcat(input, "/");
                 __delay_ms(300);
             }
         }
@@ -250,8 +237,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowB){
                 LCDdisplay("x");
-                operator = '*';
-                numEntries++;
+                strcat(input, "x");
                 __delay_ms(300);
             }
         }
@@ -259,8 +245,7 @@ int main(){
             __delay_ms(10);
             if(buttonRowC){
                 LCDdisplay("-");
-                operator = '-';
-                numEntries++;
+                strcat(input, "-");
                 __delay_ms(300);
             }
         }
@@ -268,13 +253,12 @@ int main(){
             __delay_ms(10);
             if(buttonRowD){
                 LCDdisplay("+");
-                operator = '+';
-                numEntries++;
+                strcat(input, "+");
                 __delay_ms(300);
             }
         }
         else{
-            __delay_ms(1);
+            __delay_ms(10);
         }
         buttonCol4 = 0;
     }
