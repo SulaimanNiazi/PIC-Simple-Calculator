@@ -41,7 +41,6 @@
 #include <builtins.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <stdbool.h>
 
 void toggleEnable(){
     Epin = 1;
@@ -205,23 +204,27 @@ char* calculate(double* values, char operator){
     static char result[16];
     switch(operator){
         case '+':
-        snprintf(result, 16, "%f", values[0] + values[1]);
+        values[0] += values[1];
         break;
 
         case '-':
-        snprintf(result, 16, "%f", values[0] - values[1]);
+        values[0] -= values[1];
         break;
 
         case 'x':
-        snprintf(result, 16, "%f", values[0] * values[1]);
+        values[0] *= values[1];
         break;
+
         case '/':
-        snprintf(result, 16, "%f", values[0] / values[1]);
+        values[0] /= values[1];
         break;
         
         default:
-        snprintf(result, 16, "Invalid Operator: %c", operator);
+        //snprintf(result, 16, "Invalid Operator: %c", operator);
+        return "";
     }
+    values[1] = 0;
+    snprintf(result, 16, "%f", values[0]);
     return result;
 }
 
@@ -274,10 +277,20 @@ int main(){
             case '/':
             case 'x':
             operator = *newInput[0];
-            LCDdisplay(*newInput);
-            if(valueNo == 0){
+            switch(valueNo){
+                case 0:
                 valueNo++;
+                break;
+
+                case 1:
+                strcpy(output, calculate(values, operator));
+
+                default:
+                sendCommand(0x01);
+                valueNo = 1;
+                LCDdisplay(output);
             }
+            LCDdisplay(*newInput);
             break;
 
             case '=':
@@ -285,7 +298,7 @@ int main(){
             selectRow(2);
             LCDdisplay(output);
             selectRow(1);
-            
+            valueNo = 2;
             break;
 
             case 'C':
@@ -296,6 +309,12 @@ int main(){
             break;
 
             default:
+            if(valueNo == 2){
+                valueNo = 0;
+                sendCommand(0x01);
+                operator = '+';
+                memset(values, 0, 2);
+            }
             setDigit(&values[valueNo], newInput[0]);
         }
     }
