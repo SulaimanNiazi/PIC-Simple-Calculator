@@ -76,128 +76,129 @@ void setDigit(double *oldValue, char *newValue){
     __delay_ms(300);
 }
 char* getInput(){
+    char *output[1];
+    *output = "";
     __delay_ms(300);
     while(1){
         buttonCol1 = 1;
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                return "7";
+                *output = "7";
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                return "4";
+                *output = "4";
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                return "1";
+                *output = "1";
             }
         }
         else if(buttonRowD){ //  C/on Clear button
             __delay_ms(10);
             if(buttonRowD){
-                return "C";
+                *output = "C";
             }
         }
         else{
             __delay_ms(10);
         }
         buttonCol1 = 0;
-        __delay_ms(1);
         buttonCol2 = 1;
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                return "8";
+                *output = "8";
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                return "5";
+                *output = "5";
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                return "2";
+                *output = "2";
             }
         }
         else if(buttonRowD){
             __delay_ms(10);
             if(buttonRowD){
-                return "0";
+                *output = "0";
             }
         }
         else{
             __delay_ms(10);
         }
         buttonCol2 = 0;
-        __delay_ms(1);
         buttonCol3 = 1;
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                return "9";
+                *output = "9";
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                return "6";
+                *output = "6";
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                return "3";
+                *output = "3";
             }
         }
         else if(buttonRowD){ // = equals button
             __delay_ms(10);
             if(buttonRowD){
-                return "=";
+                *output = "=";
             }
         }
         else{
             __delay_ms(10);
         }
         buttonCol3 = 0;
-        __delay_ms(1);
         buttonCol4 = 1;
         if(buttonRowA){
             __delay_ms(10);
             if(buttonRowA){
-                return "/";
+                *output = "/";
             }
         }
         else if(buttonRowB){
             __delay_ms(10);
             if(buttonRowB){
-                return "x";
+                *output = "x";
             }
         }
         else if(buttonRowC){
             __delay_ms(10);
             if(buttonRowC){
-                return "-";
+                *output = "-";
             }
         }
         else if(buttonRowD){
             __delay_ms(10);
             if(buttonRowD){
-                return "+";
+                *output = "+";
             }
         }
         else{
             __delay_ms(10);
         }
         buttonCol4 = 0;
-        __delay_ms(1);
+        if(strlen(*output)){
+            return *output;
+        }
     }
 }
 char* calculate(double* values, char operator){
