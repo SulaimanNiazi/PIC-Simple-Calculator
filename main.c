@@ -225,6 +225,17 @@ char* calculate(double* values, char operator){
     }
     values[1] = 0;
     snprintf(result, 16, "%f", values[0]);
+    for(uint16_t x = strlen(result) - 1; x >= 0; x--){
+        if(result[x] == '0'){
+            result[x] = '\0';
+        }
+        else{
+            if(result[x] == '.'){
+                result[x] = '\0';
+            }
+            break;
+        }
+    }
     return result;
 }
 
@@ -250,7 +261,7 @@ int main(){
     EpinDIR = 0;
     RSpinDIR = 0;
     RWpinDIR = 0;
-    for(int x = 0; x < 3; x++){
+    for(uint16_t x = 0; x < 3; x++){
         __delay_ms(100);
         sendCommand(0x30);
     }
