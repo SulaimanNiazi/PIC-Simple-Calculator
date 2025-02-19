@@ -40,6 +40,8 @@
 #include <string.h>
 #include <builtins.h>
 #include <stdint.h>
+#include <stdio.h>
+#include <stdbool.h>
 
 void toggleEnable(){
     Epin = 1;
@@ -69,13 +71,13 @@ void selectRow(uint16_t row){
     }
 }
 
-void setDigit(char *string, char *digit){
-    LCDdisplay(digit);
-    strcat(string, digit);
+void setDigit(double *oldValue, char *newValue){
+    LCDdisplay(newValue);
+    *oldValue = *oldValue * 10 + (double)(*newValue - '0');
     __delay_ms(300);
 }
 char* getInput(){
-    __delay_ms(500);
+    __delay_ms(300);
     while(1){
         buttonCol1 = 1;
         if(buttonRowA){
@@ -106,6 +108,7 @@ char* getInput(){
             __delay_ms(10);
         }
         buttonCol1 = 0;
+        __delay_ms(1);
         buttonCol2 = 1;
         if(buttonRowA){
             __delay_ms(10);
@@ -135,6 +138,7 @@ char* getInput(){
             __delay_ms(10);
         }
         buttonCol2 = 0;
+        __delay_ms(1);
         buttonCol3 = 1;
         if(buttonRowA){
             __delay_ms(10);
@@ -164,6 +168,7 @@ char* getInput(){
             __delay_ms(10);
         }
         buttonCol3 = 0;
+        __delay_ms(1);
         buttonCol4 = 1;
         if(buttonRowA){
             __delay_ms(10);
@@ -193,7 +198,31 @@ char* getInput(){
             __delay_ms(10);
         }
         buttonCol4 = 0;
+        __delay_ms(1);
     }
+}
+char* calculate(double* values, char operator){
+    static char result[16];
+    switch(operator){
+        case '+':
+        snprintf(result, 16, "%f", values[0] + values[1]);
+        break;
+
+        case '-':
+        snprintf(result, 16, "%f", values[0] - values[1]);
+        break;
+
+        case 'x':
+        snprintf(result, 16, "%f", values[0] * values[1]);
+        break;
+        case '/':
+        snprintf(result, 16, "%f", values[0] / values[1]);
+        break;
+        
+        default:
+        snprintf(result, 16, "Invalid Operator: %c", operator);
+    }
+    return result;
 }
 
 int main(){
@@ -232,36 +261,42 @@ int main(){
 
 //Initialization of variables
     
-    char input[16] = "", equation[16], output[16];
+    char output[16], operator = '+';
+    double values[2] = {0,0};
+    uint16_t valueNo = 0;
 
     while(1){
         char *newInput[1];
         *newInput = getInput();
         switch(*newInput[0]){
+            case '+':
+            case '-':
+            case '/':
+            case 'x':
+            operator = *newInput[0];
+            LCDdisplay(*newInput);
+            if(valueNo == 0){
+                valueNo++;
+            }
+            break;
+
             case '=':
-            strcpy(equation, "0+");
-            strcat(equation, input);
-            strcpy(output, equation);
+            strcpy(output, calculate(values, operator));
             selectRow(2);
             LCDdisplay(output);
             selectRow(1);
-            memset(input, 0, sizeof(input));
+            
             break;
 
             case 'C':
             sendCommand(0x01);
-            memset(input, 0, sizeof(input));
+            memset(values, 0, 2);
+            operator = '+';
+            valueNo = 0;
             break;
 
             default:
-            if(strlen(input) < 16){
-                setDigit(input, *newInput);
-            }
-            else{
-                selectRow(2);
-                LCDdisplay("Limit reached.");
-                selectRow(1);
-            }
+            setDigit(&values[valueNo], newInput[0]);
         }
     }
 }
