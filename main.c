@@ -38,8 +38,6 @@
 #define _XTAL_FREQ 20000000
 #include <xc.h>
 #include <string.h>
-#include <builtins.h>
-#include <stdint.h>
 #include <stdio.h>
 
 void toggleEnable(){
@@ -201,31 +199,30 @@ char* getInput(){
         }
     }
 }
-char* calculate(double* values, char operator){
-    static char result[16];
+char* calculate(double *num1, char operator, double *num2){
+    static char result[16] = {};
     switch(operator){
         case '+':
-        values[0] += values[1];
+        *num1 += *num2;
         break;
 
         case '-':
-        values[0] -= values[1];
+        *num1 -= *num2;
         break;
 
         case 'x':
-        values[0] *= values[1];
+        *num1 *= *num2;
         break;
 
         case '/':
-        values[0] /= values[1];
+        *num1 /= *num2;
         break;
         
         default:
-        //snprintf(result, 16, "Invalid Operator: %c", operator);
         return "";
     }
-    values[1] = 0;
-    snprintf(result, 16, "%f", values[0]);
+    *num2 = 0;
+    snprintf(result, 16, "%f", *num1);
     for(uint16_t x = strlen(result) - 1; x >= 0; x--){
         if(result[x] == '0'){
             result[x] = '\0';
@@ -295,7 +292,7 @@ int main(){
                 break;
 
                 case 1:
-                strcpy(output, calculate(values, operator));
+                strcpy(output, calculate(&values[0], operator, &values[1]));
 
                 default:
                 sendCommand(0x01);
@@ -306,28 +303,24 @@ int main(){
             break;
 
             case '=':
-            strcpy(output, calculate(values, operator));
+            strcpy(output, calculate(&values[0], operator, &values[1]));
             selectRow(2);
             LCDdisplay(output);
             selectRow(1);
             valueNo = 2;
             break;
 
-            case 'C':
-            sendCommand(0x01);
-            memset(values, 0, 2);
-            operator = '+';
-            valueNo = 0;
-            break;
-
             default:
-            if(valueNo == 2){
+            if(*newInput[0] == 'C' || valueNo == 2){
                 valueNo = 0;
                 sendCommand(0x01);
                 operator = '+';
-                memset(values, 0, 2);
+                values[0] = 0;
+                values[1] = 0;
             }
-            setDigit(&values[valueNo], newInput[0]);
+            if(*newInput[0] != 'C'){
+                setDigit(&values[valueNo], newInput[0]);
+            }
         }
     }
 }
