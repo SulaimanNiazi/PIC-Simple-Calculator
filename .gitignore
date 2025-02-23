@@ -17,5 +17,6 @@ Makefile
 # Exceptions
 
 !Simulation/*.pdsprj
+!Simulation/*.mp4
 !**/*.cof
 !**/*.hex
