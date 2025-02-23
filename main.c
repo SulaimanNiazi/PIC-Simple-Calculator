@@ -69,8 +69,8 @@ void selectRow(uint16_t row){
     }
 }
 
-void setDigit(double *oldValue, char *newValue, bool state){
-    if(state){
+void setDigit(double *oldValue, char *newValue, bool positive){
+    if(positive){
         *oldValue = *oldValue * 10 + (double)(*newValue - '0');
     }
     else{
@@ -278,15 +278,15 @@ int main(){
     char output[16], operator = '+';
     double values[2] = {0,0};
     uint16_t valuesCompleted = 0;
-    bool state = true;
+    bool positive = true;
 
     while(1){
         char *newInput[1];
         *newInput = getInput();
         switch(*newInput[0]){
             case '-':
-            if(state && valuesCompleted<2){
-                state = false;
+            if(positive && valuesCompleted<2){
+                positive = false;
                 if(operator != '\0'){
                     LCDdisplay(*newInput);
                     break;
@@ -296,7 +296,7 @@ int main(){
             case '/':
             case '+':
             case 'x':
-            state = true;
+            positive = true;
             operator = *newInput[0];
             switch(valuesCompleted){
                 case 0:
@@ -329,11 +329,12 @@ int main(){
                 operator = '\0';
                 values[0] = 0;
                 values[1] = 0;
-                state = true;
+                positive = true;
+                if(*newInput[0] == 'C'){
+                    break;
+                }
             }
-            if(*newInput[0] != 'C'){
-                setDigit(&values[valuesCompleted], newInput[0], state);
-            }
+            setDigit(&values[valuesCompleted], newInput[0], positive);
         }
     }
 }
