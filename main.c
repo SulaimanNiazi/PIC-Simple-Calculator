@@ -277,7 +277,7 @@ int main(){
     
     char output[16], operator = '+';
     double values[2] = {0,0};
-    uint16_t valueNo = 0;
+    uint16_t valuesCompleted = 0;
     bool state = true;
 
     while(1){
@@ -285,7 +285,7 @@ int main(){
         *newInput = getInput();
         switch(*newInput[0]){
             case '-':
-            if(state && valueNo<2){
+            if(state && valuesCompleted<2){
                 state = false;
                 if(operator != '\0'){
                     LCDdisplay(*newInput);
@@ -298,9 +298,9 @@ int main(){
             case 'x':
             state = true;
             operator = *newInput[0];
-            switch(valueNo){
+            switch(valuesCompleted){
                 case 0:
-                valueNo++;
+                valuesCompleted++;
                 break;
 
                 case 1:
@@ -308,7 +308,7 @@ int main(){
 
                 default:
                 sendCommand(0x01);
-                valueNo = 1;
+                valuesCompleted = 1;
                 LCDdisplay(output);
             }
             LCDdisplay(*newInput);
@@ -319,12 +319,12 @@ int main(){
             selectRow(2);
             LCDdisplay(output);
             selectRow(1);
-            valueNo = 2;
+            valuesCompleted = 2;
             break;
 
             default:
-            if(*newInput[0] == 'C' || valueNo == 2){
-                valueNo = 0;
+            if(*newInput[0] == 'C' || valuesCompleted == 2){
+                valuesCompleted = 0;
                 sendCommand(0x01);
                 operator = '\0';
                 values[0] = 0;
@@ -332,7 +332,7 @@ int main(){
                 state = true;
             }
             if(*newInput[0] != 'C'){
-                setDigit(&values[valueNo], newInput[0], state);
+                setDigit(&values[valuesCompleted], newInput[0], state);
             }
         }
     }
