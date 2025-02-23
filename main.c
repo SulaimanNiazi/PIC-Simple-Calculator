@@ -39,6 +39,7 @@
 #include <xc.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 void toggleEnable(){
     Epin = 1;
@@ -68,9 +69,14 @@ void selectRow(uint16_t row){
     }
 }
 
-void setDigit(double *oldValue, char *newValue){
+void setDigit(double *oldValue, char *newValue, bool state){
+    if(state){
+        *oldValue = *oldValue * 10 + (double)(*newValue - '0');
+    }
+    else{
+        *oldValue = *oldValue * 10 - (double)(*newValue - '0');
+    }
     LCDdisplay(newValue);
-    *oldValue = *oldValue * 10 + (double)(*newValue - '0');
     __delay_ms(300);
 }
 char* getInput(){
@@ -202,10 +208,6 @@ char* getInput(){
 char* calculate(double *num1, char operator, double *num2){
     static char result[16] = {};
     switch(operator){
-        case '+':
-        *num1 += *num2;
-        break;
-
         case '-':
         *num1 -= *num2;
         break;
@@ -219,7 +221,7 @@ char* calculate(double *num1, char operator, double *num2){
         break;
         
         default:
-        return "";
+        *num1 += *num2;
     }
     *num2 = 0;
     snprintf(result, 16, "%f", *num1);
@@ -276,15 +278,25 @@ int main(){
     char output[16], operator = '+';
     double values[2] = {0,0};
     uint16_t valueNo = 0;
+    bool state = true;
 
     while(1){
         char *newInput[1];
         *newInput = getInput();
         switch(*newInput[0]){
-            case '+':
             case '-':
+            if(state && valueNo<2){
+                state = false;
+                if(operator != '\0'){
+                    LCDdisplay(*newInput);
+                    break;
+                }
+            }
+
             case '/':
+            case '+':
             case 'x':
+            state = true;
             operator = *newInput[0];
             switch(valueNo){
                 case 0:
@@ -314,12 +326,13 @@ int main(){
             if(*newInput[0] == 'C' || valueNo == 2){
                 valueNo = 0;
                 sendCommand(0x01);
-                operator = '+';
+                operator = '\0';
                 values[0] = 0;
                 values[1] = 0;
+                state = true;
             }
             if(*newInput[0] != 'C'){
-                setDigit(&values[valueNo], newInput[0]);
+                setDigit(&values[valueNo], newInput[0], state);
             }
         }
     }
