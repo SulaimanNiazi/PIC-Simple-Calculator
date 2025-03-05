@@ -1,16 +1,12 @@
 # Directories
 
-_build/*
-.vscode/*
-cmake/*
-build/*
-nbproject/*
 dist/default/debug/*
+dist/default/production
 Simulation/*
+
 
 # Files
 
-Makefile
 *.code-workspace
 **/[Tt]est.*
 

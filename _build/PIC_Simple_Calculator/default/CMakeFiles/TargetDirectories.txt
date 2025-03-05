@@ -1,0 +1,4 @@
+C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/_build/PIC_Simple_Calculator/default/CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir
+C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/_build/PIC_Simple_Calculator/default/CMakeFiles/PIC_Simple_Calculator_default_PIC_Calculator.hex.dir
+C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/_build/PIC_Simple_Calculator/default/CMakeFiles/edit_cache.dir
+C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/_build/PIC_Simple_Calculator/default/CMakeFiles/rebuild_cache.dir

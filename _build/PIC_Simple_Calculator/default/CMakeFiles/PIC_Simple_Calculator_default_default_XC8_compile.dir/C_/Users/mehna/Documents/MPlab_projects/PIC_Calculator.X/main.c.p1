@@ -1,0 +1,1349 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"284 C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 284:     struct {
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"283
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 283: typedef union {
+[u S13 `S14 1 ]
+[n S13 . . ]
+"295
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 295: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS13 ~T0 @X0 0 e@7 ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include/builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"216 C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"54 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/string.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"346 C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 346:     struct {
+[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S16 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"345
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 345: typedef union {
+[u S15 `S16 1 ]
+[n S15 . . ]
+"357
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 357: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS15 ~T0 @X0 0 e@8 ]
+"123 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdio.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdio.h: 123: int snprintf(char *restrict, size_t, const char *restrict, ...);
+[v _snprintf `(i ~T0 @X0 0 e2v`*uc`ui`*Cuc ]
+[p mainexit ]
+"1505 C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1505:     struct {
+[s S64 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S64 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"1504
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1504: typedef union {
+[u S63 `S64 1 ]
+[n S63 . . ]
+"1516
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1516: extern volatile TRISDbits_t TRISDbits __attribute__((address(0x088)));
+[v _TRISDbits `VS63 ~T0 @X0 0 e@136 ]
+"1375
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1443
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1443:     struct {
+[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S62 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1442
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1442: typedef union {
+[u S61 `S62 1 ]
+[n S61 . . ]
+"1454
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1454: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS61 ~T0 @X0 0 e@135 ]
+"33 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/string.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/string.h: 33: char *strcpy (char *restrict, const char *restrict);
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"54 C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"44 C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 44: void toggleEnable(){
+[v _toggleEnable `(v ~T0 @X0 1 ef ]
+{
+[e :U _toggleEnable ]
+[f ]
+"45
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 45:     PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"46
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 46:     _delay((unsigned long)((10)*(20000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"47
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 47:     PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"48
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 48:     _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"49
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 49: }
+[e :UE 102 ]
+}
+"50
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 50: void sendCommand(uint8_t command){
+[v _sendCommand `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _sendCommand ]
+[v _command `uc ~T0 @X0 1 r1 ]
+[f ]
+"51
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 51:     PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"52
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 52:     PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"53
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 53:     PORTB = command;
+[e = _PORTB _command ]
+"54
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 54:     toggleEnable();
+[e ( _toggleEnable ..  ]
+"55
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 55: }
+[e :UE 103 ]
+}
+"56
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 56: void LCDdisplay(char sentence[]){
+[v _LCDdisplay `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _LCDdisplay ]
+[v _sentence `*uc ~T0 @X0 1 r1 ]
+[f ]
+"57
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 57:     PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"58
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 58:     PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"59
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 59:     uint16_t lineLength = strlen(sentence);
+[v _lineLength `us ~T0 @X0 1 a ]
+[e = _lineLength -> ( _strlen (1 -> _sentence `*Cuc `us ]
+"60
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 60:     for(uint16_t ind = 0; ind < lineLength; ind++){
+{
+[v _ind `us ~T0 @X0 1 a ]
+[e = _ind -> -> 0 `i `us ]
+[e $U 108  ]
+[e :U 105 ]
+{
+"61
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 61:         PORTB = (uint8_t)sentence[ind];
+[e = _PORTB -> *U + _sentence * -> _ind `ux -> -> # *U _sentence `ui `ux `uc ]
+"62
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 62:         toggleEnable();
+[e ( _toggleEnable ..  ]
+"63
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 63:     }
+}
+[e ++ _ind -> -> 1 `i `us ]
+[e :U 108 ]
+[e $ < -> _ind `ui -> _lineLength `ui 105  ]
+[e :U 106 ]
+}
+"64
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 64: }
+[e :UE 104 ]
+}
+"65
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 65: void selectRow(uint16_t row){
+[v _selectRow `(v ~T0 @X0 1 ef1`us ]
+{
+[e :U _selectRow ]
+[v _row `us ~T0 @X0 1 r1 ]
+[f ]
+"66
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 66:     switch(row){
+[e $U 111  ]
+{
+"67
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 67:         case 1: sendCommand(0x80); break;
+[e :U 112 ]
+[e ( _sendCommand (1 -> -> 128 `i `uc ]
+[e $U 110  ]
+"68
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 68:         case 2: sendCommand(0xc0); break;
+[e :U 113 ]
+[e ( _sendCommand (1 -> -> 192 `i `uc ]
+[e $U 110  ]
+"69
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 69:     }
+}
+[e $U 110  ]
+[e :U 111 ]
+[e [\ -> _row `ui , $ -> -> 1 `i `ui 112
+ , $ -> -> 2 `i `ui 113
+ 110 ]
+[e :U 110 ]
+"70
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 70: }
+[e :UE 109 ]
+}
+"72
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 72: void setDigit(double *oldValue, char *newValue, _Bool positive){
+[v _setDigit `(v ~T0 @X0 1 ef3`*d`*uc`a ]
+{
+[e :U _setDigit ]
+[v _oldValue `*d ~T0 @X0 1 r1 ]
+[v _newValue `*uc ~T0 @X0 1 r2 ]
+[v _positive `a ~T0 @X0 1 r3 ]
+[f ]
+"73
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 73:     if(positive){
+[e $ ! != -> _positive `i -> 0 `i 115  ]
+{
+"74
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 74:         *oldValue = *oldValue * 10 + (double)(*newValue - '0');
+[e = *U _oldValue + * *U _oldValue -> -> 10 `i `d -> - -> *U _newValue `ui -> 48 `ui `d ]
+"75
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 75:     }
+}
+[e $U 116  ]
+"76
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 76:     else{
+[e :U 115 ]
+{
+"77
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 77:         *oldValue = *oldValue * 10 - (double)(*newValue - '0');
+[e = *U _oldValue - * *U _oldValue -> -> 10 `i `d -> - -> *U _newValue `ui -> 48 `ui `d ]
+"78
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 78:     }
+}
+[e :U 116 ]
+"79
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 79:     LCDdisplay(newValue);
+[e ( _LCDdisplay (1 _newValue ]
+"80
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 80:     _delay((unsigned long)((300)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"81
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 81: }
+[e :UE 114 ]
+}
+"82
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 82: char* getInput(){
+[v _getInput `(*uc ~T0 @X0 1 ef ]
+{
+[e :U _getInput ]
+[f ]
+"83
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 83:     char *output[1];
+[v _output `*uc ~T0 @X0 -> -> 1 `i `ux a ]
+"84
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 84:     *output = "";
+[e = *U &U _output :s 1C ]
+"85
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 85:     _delay((unsigned long)((300)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"86
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 86:     while(1){
+[e :U 119 ]
+{
+"87
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 87:         PORTDbits.RD4 = 1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+"88
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 88:         if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 121  ]
+{
+"89
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 89:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"90
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 90:             if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 122  ]
+{
+"91
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 91:                 *output = "7";
+[e = *U &U _output :s 2C ]
+"92
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 92:             }
+}
+[e :U 122 ]
+"93
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 93:         }
+}
+[e $U 123  ]
+"94
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 94:         else if(PORTDbits.RD1){
+[e :U 121 ]
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 124  ]
+{
+"95
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 95:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"96
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 96:             if(PORTDbits.RD1){
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 125  ]
+{
+"97
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 97:                 *output = "4";
+[e = *U &U _output :s 3C ]
+"98
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 98:             }
+}
+[e :U 125 ]
+"99
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 99:         }
+}
+[e $U 126  ]
+"100
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 100:         else if(PORTDbits.RD2){
+[e :U 124 ]
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 127  ]
+{
+"101
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 101:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"102
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 102:             if(PORTDbits.RD2){
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 128  ]
+{
+"103
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 103:                 *output = "1";
+[e = *U &U _output :s 4C ]
+"104
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 104:             }
+}
+[e :U 128 ]
+"105
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 105:         }
+}
+[e $U 129  ]
+"106
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 106:         else if(PORTDbits.RD3){
+[e :U 127 ]
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 130  ]
+{
+"107
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 107:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"108
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 108:             if(PORTDbits.RD3){
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 131  ]
+{
+"109
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 109:                 *output = "C";
+[e = *U &U _output :s 5C ]
+"110
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 110:             }
+}
+[e :U 131 ]
+"111
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 111:         }
+}
+[e $U 132  ]
+"112
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 112:         else{
+[e :U 130 ]
+{
+"113
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 113:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"114
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 114:         }
+}
+[e :U 132 ]
+[e :U 129 ]
+[e :U 126 ]
+[e :U 123 ]
+"115
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 115:         PORTDbits.RD4 = 0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"116
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 116:         PORTDbits.RD5 = 1;
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+"117
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 117:         if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 133  ]
+{
+"118
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 118:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"119
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 119:             if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 134  ]
+{
+"120
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 120:                 *output = "8";
+[e = *U &U _output :s 6C ]
+"121
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 121:             }
+}
+[e :U 134 ]
+"122
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 122:         }
+}
+[e $U 135  ]
+"123
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 123:         else if(PORTDbits.RD1){
+[e :U 133 ]
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 136  ]
+{
+"124
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 124:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"125
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 125:             if(PORTDbits.RD1){
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 137  ]
+{
+"126
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 126:                 *output = "5";
+[e = *U &U _output :s 7C ]
+"127
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 127:             }
+}
+[e :U 137 ]
+"128
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 128:         }
+}
+[e $U 138  ]
+"129
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 129:         else if(PORTDbits.RD2){
+[e :U 136 ]
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 139  ]
+{
+"130
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 130:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"131
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 131:             if(PORTDbits.RD2){
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 140  ]
+{
+"132
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 132:                 *output = "2";
+[e = *U &U _output :s 8C ]
+"133
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 133:             }
+}
+[e :U 140 ]
+"134
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 134:         }
+}
+[e $U 141  ]
+"135
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 135:         else if(PORTDbits.RD3){
+[e :U 139 ]
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 142  ]
+{
+"136
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 136:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"137
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 137:             if(PORTDbits.RD3){
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 143  ]
+{
+"138
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 138:                 *output = "0";
+[e = *U &U _output :s 9C ]
+"139
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 139:             }
+}
+[e :U 143 ]
+"140
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 140:         }
+}
+[e $U 144  ]
+"141
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 141:         else{
+[e :U 142 ]
+{
+"142
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 142:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"143
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 143:         }
+}
+[e :U 144 ]
+[e :U 141 ]
+[e :U 138 ]
+[e :U 135 ]
+"144
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 144:         PORTDbits.RD5 = 0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"145
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 145:         PORTDbits.RD6 = 1;
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+"146
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 146:         if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 145  ]
+{
+"147
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 147:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"148
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 148:             if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 146  ]
+{
+"149
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 149:                 *output = "9";
+[e = *U &U _output :s 10C ]
+"150
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 150:             }
+}
+[e :U 146 ]
+"151
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 151:         }
+}
+[e $U 147  ]
+"152
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 152:         else if(PORTDbits.RD1){
+[e :U 145 ]
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 148  ]
+{
+"153
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 153:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"154
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 154:             if(PORTDbits.RD1){
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 149  ]
+{
+"155
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 155:                 *output = "6";
+[e = *U &U _output :s 11C ]
+"156
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 156:             }
+}
+[e :U 149 ]
+"157
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 157:         }
+}
+[e $U 150  ]
+"158
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 158:         else if(PORTDbits.RD2){
+[e :U 148 ]
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 151  ]
+{
+"159
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 159:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"160
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 160:             if(PORTDbits.RD2){
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 152  ]
+{
+"161
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 161:                 *output = "3";
+[e = *U &U _output :s 12C ]
+"162
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 162:             }
+}
+[e :U 152 ]
+"163
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 163:         }
+}
+[e $U 153  ]
+"164
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 164:         else if(PORTDbits.RD3){
+[e :U 151 ]
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 154  ]
+{
+"165
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 165:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"166
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 166:             if(PORTDbits.RD3){
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 155  ]
+{
+"167
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 167:                 *output = "=";
+[e = *U &U _output :s 13C ]
+"168
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 168:             }
+}
+[e :U 155 ]
+"169
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 169:         }
+}
+[e $U 156  ]
+"170
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 170:         else{
+[e :U 154 ]
+{
+"171
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 171:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"172
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 172:         }
+}
+[e :U 156 ]
+[e :U 153 ]
+[e :U 150 ]
+[e :U 147 ]
+"173
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 173:         PORTDbits.RD6 = 0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"174
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 174:         PORTDbits.RD7 = 1;
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
+"175
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 175:         if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 157  ]
+{
+"176
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 176:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"177
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 177:             if(PORTDbits.RD0){
+[e $ ! != -> . . _PORTDbits 0 0 `i -> 0 `i 158  ]
+{
+"178
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 178:                 *output = "/";
+[e = *U &U _output :s 14C ]
+"179
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 179:             }
+}
+[e :U 158 ]
+"180
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 180:         }
+}
+[e $U 159  ]
+"181
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 181:         else if(PORTDbits.RD1){
+[e :U 157 ]
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 160  ]
+{
+"182
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 182:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"183
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 183:             if(PORTDbits.RD1){
+[e $ ! != -> . . _PORTDbits 0 1 `i -> 0 `i 161  ]
+{
+"184
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 184:                 *output = "x";
+[e = *U &U _output :s 15C ]
+"185
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 185:             }
+}
+[e :U 161 ]
+"186
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 186:         }
+}
+[e $U 162  ]
+"187
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 187:         else if(PORTDbits.RD2){
+[e :U 160 ]
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 163  ]
+{
+"188
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 188:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"189
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 189:             if(PORTDbits.RD2){
+[e $ ! != -> . . _PORTDbits 0 2 `i -> 0 `i 164  ]
+{
+"190
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 190:                 *output = "-";
+[e = *U &U _output :s 16C ]
+"191
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 191:             }
+}
+[e :U 164 ]
+"192
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 192:         }
+}
+[e $U 165  ]
+"193
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 193:         else if(PORTDbits.RD3){
+[e :U 163 ]
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 166  ]
+{
+"194
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 194:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"195
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 195:             if(PORTDbits.RD3){
+[e $ ! != -> . . _PORTDbits 0 3 `i -> 0 `i 167  ]
+{
+"196
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 196:                 *output = "+";
+[e = *U &U _output :s 17C ]
+"197
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 197:             }
+}
+[e :U 167 ]
+"198
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 198:         }
+}
+[e $U 168  ]
+"199
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 199:         else{
+[e :U 166 ]
+{
+"200
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 200:             _delay((unsigned long)((10)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"201
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 201:         }
+}
+[e :U 168 ]
+[e :U 165 ]
+[e :U 162 ]
+[e :U 159 ]
+"202
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 202:         PORTDbits.RD7 = 0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+"203
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 203:         if(strlen(*output)){
+[e $ ! != ( _strlen (1 -> *U &U _output `*Cuc -> -> 0 `i `ui 169  ]
+{
+"204
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 204:             return *output;
+[e ) *U &U _output ]
+[e $UE 117  ]
+"205
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 205:         }
+}
+[e :U 169 ]
+"206
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 206:     }
+}
+[e :U 118 ]
+[e $U 119  ]
+[e :U 120 ]
+"207
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 207: }
+[e :UE 117 ]
+}
+"208
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 208: char* calculate(double *num1, char operator, double *num2){
+[v _calculate `(*uc ~T0 @X0 1 ef3`*d`uc`*d ]
+{
+[e :U _calculate ]
+[v _num1 `*d ~T0 @X0 1 r1 ]
+[v _operator `uc ~T0 @X0 1 r2 ]
+[v _num2 `*d ~T0 @X0 1 r3 ]
+[f ]
+"209
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 209:     static char result[16] = {};
+[v F1513 `uc ~T0 @X0 -> 16 `i s result ]
+[i F1513
+:U ..
+..
+]
+"210
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 210:     switch(operator){
+[e $U 172  ]
+{
+"211
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 211:         case '-':
+[e :U 173 ]
+"212
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 212:         *num1 -= *num2;
+[e =- *U _num1 *U _num2 ]
+"213
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 213:         break;
+[e $U 171  ]
+"215
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 215:         case 'x':
+[e :U 174 ]
+"216
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 216:         *num1 *= *num2;
+[e =* *U _num1 *U _num2 ]
+"217
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 217:         break;
+[e $U 171  ]
+"219
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 219:         case '/':
+[e :U 175 ]
+"220
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 220:         *num1 /= *num2;
+[e =/ *U _num1 *U _num2 ]
+"221
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 221:         break;
+[e $U 171  ]
+"223
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 223:         default:
+[e :U 176 ]
+"224
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 224:         *num1 += *num2;
+[e =+ *U _num1 *U _num2 ]
+"225
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 225:     }
+}
+[e $U 171  ]
+[e :U 172 ]
+[e [\ _operator , $ -> -> 45 `ui `i 173
+ , $ -> -> 120 `ui `i 174
+ , $ -> -> 47 `ui `i 175
+ 176 ]
+[e :U 171 ]
+"226
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 226:     *num2 = 0;
+[e = *U _num2 -> -> 0 `i `d ]
+"227
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 227:     snprintf(result, 16, "%f", *num1);
+[e ( _snprintf (2 , (. , , &U F1513 -> -> 16 `i `ui :s 18C *U _num1 ]
+"228
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 228:     for(uint16_t x = strlen(result) - 1; x >= 0; x--){
+{
+[v _x `us ~T0 @X0 1 a ]
+[e = _x -> - ( _strlen (1 -> &U F1513 `*Cuc -> -> 1 `i `ui `us ]
+[e $ >= -> _x `ui -> -> 0 `i `ui 177  ]
+[e $U 178  ]
+[e :U 177 ]
+{
+"229
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 229:         if(result[x] == '0'){
+[e $ ! == -> *U + &U F1513 * -> _x `ux -> -> # *U &U F1513 `ui `ux `ui -> 48 `ui 180  ]
+{
+"230
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 230:             result[x] = '\0';
+[e = *U + &U F1513 * -> _x `ux -> -> # *U &U F1513 `ui `ux -> -> 0 `ui `uc ]
+"231
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 231:         }
+}
+[e $U 181  ]
+"232
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 232:         else{
+[e :U 180 ]
+{
+"233
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 233:             if(result[x] == '.'){
+[e $ ! == -> *U + &U F1513 * -> _x `ux -> -> # *U &U F1513 `ui `ux `ui -> 46 `ui 182  ]
+{
+"234
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 234:                 result[x] = '\0';
+[e = *U + &U F1513 * -> _x `ux -> -> # *U &U F1513 `ui `ux -> -> 0 `ui `uc ]
+"235
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 235:             }
+}
+[e :U 182 ]
+"236
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 236:             break;
+[e $U 178  ]
+"237
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 237:         }
+}
+[e :U 181 ]
+"238
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 238:     }
+}
+[e -- _x -> -> 1 `i `us ]
+[e $ >= -> _x `ui -> -> 0 `i `ui 177  ]
+[e :U 178 ]
+}
+"239
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 239:     return result;
+[e ) &U F1513 ]
+[e $UE 170  ]
+"240
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 240: }
+[e :UE 170 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"242
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 242: int main(){
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"245
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 245:     TRISDbits.TRISD0 = 1;
+[e = . . _TRISDbits 0 0 -> -> 1 `i `uc ]
+"246
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 246:     TRISDbits.TRISD1 = 1;
+[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
+"247
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 247:     TRISDbits.TRISD2 = 1;
+[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
+"248
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 248:     TRISDbits.TRISD3 = 1;
+[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
+"249
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 249:     TRISDbits.TRISD4 = 0;
+[e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
+"250
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 250:     TRISDbits.TRISD5 = 0;
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+"251
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 251:     TRISDbits.TRISD6 = 0;
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
+"252
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 252:     TRISDbits.TRISD7 = 0;
+[e = . . _TRISDbits 0 7 -> -> 0 `i `uc ]
+"253
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 253:     PORTDbits.RD4 = 0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"254
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 254:     PORTDbits.RD5 = 0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"255
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 255:     PORTDbits.RD6 = 0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"256
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 256:     PORTDbits.RD7 = 0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+"260
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 260:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"261
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 261:     TRISCbits.TRISC2 = 0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"262
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 262:     TRISCbits.TRISC0 = 0;
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+"263
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 263:     TRISCbits.TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"264
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 264:     for(uint16_t x = 0; x < 3; x++){
+{
+[v _x `us ~T0 @X0 1 a ]
+[e = _x -> -> 0 `i `us ]
+[e $ < -> _x `ui -> -> 3 `i `ui 184  ]
+[e $U 185  ]
+[e :U 184 ]
+{
+"265
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 265:         _delay((unsigned long)((100)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"266
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 266:         sendCommand(0x30);
+[e ( _sendCommand (1 -> -> 48 `i `uc ]
+"267
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 267:     }
+}
+[e ++ _x -> -> 1 `i `us ]
+[e $ < -> _x `ui -> -> 3 `i `ui 184  ]
+[e :U 185 ]
+}
+"268
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 268:     _delay((unsigned long)((100)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"269
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 269:     sendCommand(0x38);
+[e ( _sendCommand (1 -> -> 56 `i `uc ]
+"270
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 270:     sendCommand(0x08);
+[e ( _sendCommand (1 -> -> 8 `i `uc ]
+"271
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 271:     sendCommand(0x01);
+[e ( _sendCommand (1 -> -> 1 `i `uc ]
+"272
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 272:     sendCommand(0x06);
+[e ( _sendCommand (1 -> -> 6 `i `uc ]
+"273
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 273:     sendCommand(0x0F);
+[e ( _sendCommand (1 -> -> 15 `i `uc ]
+"274
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 274:     selectRow(1);
+[e ( _selectRow (1 -> -> 1 `i `us ]
+"278
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 278:     char output[16], operator = '+';
+[v _output `uc ~T0 @X0 -> 16 `i a ]
+[v _operator `uc ~T0 @X0 1 a ]
+[e = _operator -> -> 43 `ui `uc ]
+[v F1519 `d ~T0 @X0 -> 2 `i s ]
+[i F1519
+:U ..
+"279
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 279:     double values[2] = {0,0};
+-> -> 0 `i `d
+-> -> 0 `i `d
+..
+]
+[v _values `d ~T0 @X0 -> 2 `i a ]
+[e = _values F1519 ]
+"280
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 280:     uint16_t valuesCompleted = 0;
+[v _valuesCompleted `us ~T0 @X0 1 a ]
+[e = _valuesCompleted -> -> 0 `i `us ]
+"281
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 281:     _Bool positive = 1;
+[v _positive `a ~T0 @X0 1 a ]
+[e = _positive -> -> 1 `i `a ]
+"283
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 283:     while(1){
+[e :U 188 ]
+{
+"284
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 284:         char *newInput[1];
+[v _newInput `*uc ~T0 @X0 -> -> 1 `i `ux a ]
+"285
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 285:         *newInput = getInput();
+[e = *U &U _newInput ( _getInput ..  ]
+"286
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 286:         switch(*newInput[0]){
+[e $U 191  ]
+{
+"287
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 287:             case '-':
+[e :U 192 ]
+"288
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 288:             if(positive && valuesCompleted<2){
+[e $ ! && != -> _positive `i -> 0 `i < -> _valuesCompleted `ui -> -> 2 `i `ui 193  ]
+{
+"289
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 289:                 positive = 0;
+[e = _positive -> -> 0 `i `a ]
+"290
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 290:                 if(operator != '\0'){
+[e $ ! != -> _operator `ui -> 0 `ui 194  ]
+{
+"291
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 291:                     LCDdisplay(*newInput);
+[e ( _LCDdisplay (1 *U &U _newInput ]
+"292
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 292:                     break;
+[e $U 190  ]
+"293
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 293:                 }
+}
+[e :U 194 ]
+"294
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 294:             }
+}
+[e :U 193 ]
+"296
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 296:             case '/':
+[e :U 195 ]
+"297
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 297:             case '+':
+[e :U 196 ]
+"298
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 298:             case 'x':
+[e :U 197 ]
+"299
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 299:             positive = 1;
+[e = _positive -> -> 1 `i `a ]
+"300
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 300:             operator = *newInput[0];
+[e = _operator *U *U + &U _newInput * -> -> -> 0 `i `ui `ux -> -> # *U &U _newInput `ui `ux ]
+"301
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 301:             switch(valuesCompleted){
+[e $U 199  ]
+{
+"302
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 302:                 case 0:
+[e :U 200 ]
+"303
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 303:                 valuesCompleted++;
+[e ++ _valuesCompleted -> -> 1 `i `us ]
+"304
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 304:                 break;
+[e $U 198  ]
+"306
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 306:                 case 1:
+[e :U 201 ]
+"307
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 307:                 strcpy(output, calculate(&values[0], operator, &values[1]));
+[e ( _strcpy (2 , &U _output -> ( _calculate (3 , , &U *U + &U _values * -> -> -> 0 `i `ui `ux -> -> # *U &U _values `ui `ux _operator &U *U + &U _values * -> -> -> 1 `i `ui `ux -> -> # *U &U _values `ui `ux `*Cuc ]
+"309
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 309:                 default:
+[e :U 202 ]
+"310
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 310:                 sendCommand(0x01);
+[e ( _sendCommand (1 -> -> 1 `i `uc ]
+"311
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 311:                 valuesCompleted = 1;
+[e = _valuesCompleted -> -> 1 `i `us ]
+"312
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 312:                 LCDdisplay(output);
+[e ( _LCDdisplay (1 &U _output ]
+"313
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 313:             }
+}
+[e $U 198  ]
+[e :U 199 ]
+[e [\ -> _valuesCompleted `ui , $ -> -> 0 `i `ui 200
+ , $ -> -> 1 `i `ui 201
+ 202 ]
+[e :U 198 ]
+"314
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 314:             LCDdisplay(*newInput);
+[e ( _LCDdisplay (1 *U &U _newInput ]
+"315
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 315:             break;
+[e $U 190  ]
+"317
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 317:             case '=':
+[e :U 203 ]
+"318
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 318:             strcpy(output, calculate(&values[0], operator, &values[1]));
+[e ( _strcpy (2 , &U _output -> ( _calculate (3 , , &U *U + &U _values * -> -> -> 0 `i `ui `ux -> -> # *U &U _values `ui `ux _operator &U *U + &U _values * -> -> -> 1 `i `ui `ux -> -> # *U &U _values `ui `ux `*Cuc ]
+"319
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 319:             selectRow(2);
+[e ( _selectRow (1 -> -> 2 `i `us ]
+"320
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 320:             LCDdisplay(output);
+[e ( _LCDdisplay (1 &U _output ]
+"321
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 321:             selectRow(1);
+[e ( _selectRow (1 -> -> 1 `i `us ]
+"322
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 322:             valuesCompleted = 2;
+[e = _valuesCompleted -> -> 2 `i `us ]
+"323
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 323:             break;
+[e $U 190  ]
+"325
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 325:             default:
+[e :U 204 ]
+"326
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 326:             if(*newInput[0] == 'C' || valuesCompleted == 2){
+[e $ ! || == -> *U *U + &U _newInput * -> -> -> 0 `i `ui `ux -> -> # *U &U _newInput `ui `ux `ui -> 67 `ui == -> _valuesCompleted `ui -> -> 2 `i `ui 205  ]
+{
+"327
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 327:                 valuesCompleted = 0;
+[e = _valuesCompleted -> -> 0 `i `us ]
+"328
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 328:                 sendCommand(0x01);
+[e ( _sendCommand (1 -> -> 1 `i `uc ]
+"329
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 329:                 operator = '\0';
+[e = _operator -> -> 0 `ui `uc ]
+"330
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 330:                 values[0] = 0;
+[e = *U + &U _values * -> -> -> 0 `i `ui `ux -> -> # *U &U _values `ui `ux -> -> 0 `i `d ]
+"331
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 331:                 values[1] = 0;
+[e = *U + &U _values * -> -> -> 1 `i `ui `ux -> -> # *U &U _values `ui `ux -> -> 0 `i `d ]
+"332
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 332:                 positive = 1;
+[e = _positive -> -> 1 `i `a ]
+"333
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 333:                 if(*newInput[0] == 'C'){
+[e $ ! == -> *U *U + &U _newInput * -> -> -> 0 `i `ui `ux -> -> # *U &U _newInput `ui `ux `ui -> 67 `ui 206  ]
+{
+"334
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 334:                     break;
+[e $U 190  ]
+"335
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 335:                 }
+}
+[e :U 206 ]
+"336
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 336:             }
+}
+[e :U 205 ]
+"337
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 337:             setDigit(&values[valuesCompleted], newInput[0], positive);
+[e ( _setDigit (3 , , &U *U + &U _values * -> _valuesCompleted `ux -> -> # *U &U _values `ui `ux *U + &U _newInput * -> -> -> 0 `i `ui `ux -> -> # *U &U _newInput `ui `ux _positive ]
+"338
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 338:         }
+}
+[e $U 190  ]
+[e :U 191 ]
+[e [\ *U *U + &U _newInput * -> -> -> 0 `i `ui `ux -> -> # *U &U _newInput `ui `ux , $ -> -> 45 `ui `i 192
+ , $ -> -> 47 `ui `i 195
+ , $ -> -> 43 `ui `i 196
+ , $ -> -> 120 `ui `i 197
+ , $ -> -> 61 `ui `i 203
+ 204 ]
+[e :U 190 ]
+"339
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 339:     }
+}
+[e :U 187 ]
+[e $U 188  ]
+[e :U 189 ]
+"340
+[; ;C:\Users\mehna\Documents\MPlab projects\PIC Calculator.X\main.c: 340: }
+[e :UE 183 ]
+}
+[p f _snprintf 8396800 ]
+[a 15C 120 0 ]
+[a 18C 37 102 0 ]
+[a 5C 67 0 ]
+[a 13C 61 0 ]
+[a 10C 57 0 ]
+[a 6C 56 0 ]
+[a 2C 55 0 ]
+[a 11C 54 0 ]
+[a 7C 53 0 ]
+[a 3C 52 0 ]
+[a 12C 51 0 ]
+[a 8C 50 0 ]
+[a 4C 49 0 ]
+[a 9C 48 0 ]
+[a 14C 47 0 ]
+[a 16C 45 0 ]
+[a 17C 43 0 ]
+[a 1C 0 ]

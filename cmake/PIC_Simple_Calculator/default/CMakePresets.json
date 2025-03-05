@@ -1,0 +1,15 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "PIC_Simple_Calculator_default_conf",
+            "binaryDir": "${fileDir}/../../../_build/PIC_Simple_Calculator/default",
+            "generator": "Ninja",
+            "toolchainFile": "${fileDir}/.generated/toolchain.cmake",
+            "cacheVariables": {
+                "CMAKE_USER_MAKE_RULES_OVERRIDE": "${fileDir}/.generated/overrides.cmake",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        }
+    ]
+}

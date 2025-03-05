@@ -1,0 +1,921 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"409 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/bits/alltypes.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/bits/alltypes.h: 409: typedef struct _IO_FILE FILE;
+[s S1 ]
+[n S1 _IO_FILE ]
+"95 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdio.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdio.h: 95: int ungetc(int, FILE *);
+[v _ungetc `(i ~T0 @X0 0 ef2`i`*S1 ]
+"87
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdio.h: 87: int fgetc(FILE *);
+[v _fgetc `(i ~T0 @X0 0 ef1`*S1 ]
+"12 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/errno.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/errno.h: 12: extern int errno;
+[v _errno `i ~T0 @X0 0 e ]
+"31 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdlib.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdlib.h: 31: float strtof (const char *restrict, char **restrict);
+[v _strtof `(f ~T0 @X0 0 ef2`*Cuc`**uc ]
+"14 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/stdarg.h
+[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
+[p i ___va_arg ]
+"40 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/string.h
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\c99/string.h: 40: int strncmp (const char *, const char *, size_t);
+[v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
+"54 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 54: static _Bool asup;
+[v _asup `a ~T0 @X0 1 s ]
+"55
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 55: static int width;
+[v _width `i ~T0 @X0 1 s ]
+"58
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 58: static int ncnv, nmatch;
+[v _ncnv `i ~T0 @X0 1 s ]
+[v _nmatch `i ~T0 @X0 1 s ]
+"71
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 71: static char dbuf[80];
+[v _dbuf `uc ~T0 @X0 -> 80 `i s ]
+"74
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 74: static void skipws(FILE *fp)
+[v _skipws `(v ~T0 @X0 1 sf1`*S1 ]
+"75
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 75: {
+{
+[e :U _skipws ]
+"74
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 74: static void skipws(FILE *fp)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+"75
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 75: {
+[f ]
+"76
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 76:     int c;
+[v _c `i ~T0 @X0 1 a ]
+"78
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 78:     while ((c = fgetc(fp)) != (-1)) {
+[e $U 9  ]
+[e :U 10 ]
+{
+"79
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 79:         if (!(((c == ' ') || ((unsigned char)((c)-'\t') < 5)))) {
+[e $ ! ! || == -> _c `ui -> 32 `ui < -> -> - -> _c `ui -> 9 `ui `uc `i -> 5 `i 12  ]
+{
+"80
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 80:             ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"81
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 81:             break;
+[e $U 11  ]
+"82
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 82:         }
+}
+[e :U 12 ]
+"83
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 83:     }
+}
+[e :U 9 ]
+"78
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 78:     while ((c = fgetc(fp)) != (-1)) {
+[e $ != = _c ( _fgetc (1 _fp -U -> 1 `i 10  ]
+[e :U 11 ]
+"84
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 84: }
+[e :UE 8 ]
+}
+"274
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 274: static int is_inf_nan(FILE *fp, char first, int pos, int n) {
+[v _is_inf_nan `(i ~T0 @X0 1 sf4`*S1`uc`i`i ]
+{
+[e :U _is_inf_nan ]
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _first `uc ~T0 @X0 1 r2 ]
+[v _pos `i ~T0 @X0 1 r3 ]
+[v _n `i ~T0 @X0 1 r4 ]
+[f ]
+"275
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 275:  int c, i, w;
+[v _c `i ~T0 @X0 1 a ]
+[v _i `i ~T0 @X0 1 a ]
+[v _w `i ~T0 @X0 1 a ]
+[v F695 `*Cuc ~T0 @X0 -> 2 `i s ]
+[i F695
+:U ..
+"276
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 276:  const char *m[2] = { "inf", "nan" };
+:s 1C
+:s 2C
+..
+]
+[v _m `*Cuc ~T0 @X0 -> 2 `i a ]
+[e = _m F695 ]
+"279
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 279:  if (n < pos + 3) {
+[e $ ! < _n + _pos -> 3 `i 14  ]
+{
+"280
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 280:   return 0;
+[e ) -> 0 `i ]
+[e $UE 13  ]
+"281
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 281:  }
+}
+[e :U 14 ]
+"282
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 282:  i = pos;
+[e = _i _pos ]
+"283
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 283:  w = ((((unsigned char)((first)-'A')) < 26) ? (first)|0x20 : (first)) == 'i' ? 0 : 1;
+[e = _w ? == -> ? < -> -> - -> _first `ui -> 65 `ui `uc `i -> 26 `i : | -> _first `i -> 32 `i -> _first `i `ui -> 105 `ui : -> 0 `i -> 1 `i ]
+"284
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 284:  dbuf[i++] = first;
+[e = *U + &U _dbuf * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U _dbuf `ui `ux _first ]
+"285
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 285:  while (i < pos + 3) {
+[e $U 15  ]
+[e :U 16 ]
+{
+"286
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 286:   c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"287
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 287:   if (c == (-1)) {
+[e $ ! == _c -U -> 1 `i 18  ]
+{
+"288
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 288:    return c;
+[e ) _c ]
+[e $UE 13  ]
+"289
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 289:   }
+}
+[e :U 18 ]
+"290
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 290:   if (((((unsigned char)((c)-'A')) < 26) ? (c)|0x20 : (c)) != m[w][i-pos]) {
+[e $ ! != ? < -> -> - -> _c `ui -> 65 `ui `uc `i -> 26 `i : | _c -> 32 `i _c -> *U + *U + &U _m * -> -> _w `ui `ux -> -> # *U &U _m `ui `ux * -> -> - _i _pos `ui `ux -> -> # *U *U + &U _m * -> -> _w `ui `ux -> -> # *U &U _m `ui `ux `ui `ux `i 19  ]
+{
+"292
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 292:    break;
+[e $U 17  ]
+"293
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 293:   }
+}
+[e :U 19 ]
+"294
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 294:   dbuf[i++] = (char)c;
+[e = *U + &U _dbuf * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"295
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 295:  }
+}
+[e :U 15 ]
+"285
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 285:  while (i < pos + 3) {
+[e $ < _i + _pos -> 3 `i 16  ]
+[e :U 17 ]
+"297
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 297:  if (i < pos + 3) {
+[e $ ! < _i + _pos -> 3 `i 20  ]
+{
+"299
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 299:   ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"300
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 300:   while (i > pos) {
+[e $U 21  ]
+[e :U 22 ]
+{
+"301
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 301:    ungetc(dbuf[--i], fp);
+[e ( _ungetc (2 , -> *U + &U _dbuf * -> -> =- _i -> 1 `i `ui `ux -> -> # *U &U _dbuf `ui `ux `i _fp ]
+"302
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 302:   }
+}
+[e :U 21 ]
+"300
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 300:   while (i > pos) {
+[e $ > _i _pos 22  ]
+[e :U 23 ]
+"303
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 303:   return 0;
+[e ) -> 0 `i ]
+[e $UE 13  ]
+"304
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 304:  }
+}
+[e :U 20 ]
+"305
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 305:  return 3;
+[e ) -> 3 `i ]
+[e $UE 13  ]
+"306
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 306: }
+[e :UE 13 ]
+}
+"308
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 308: static int atoaefg(FILE *fp, long double *pld)
+[v _atoaefg `(i ~T0 @X0 1 sf2`*S1`*d ]
+"309
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 309: {
+{
+[e :U _atoaefg ]
+"308
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 308: static int atoaefg(FILE *fp, long double *pld)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _pld `*d ~T0 @X0 1 r2 ]
+"309
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 309: {
+[f ]
+"310
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 310:     char *ep;
+[v _ep `*uc ~T0 @X0 1 a ]
+"311
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 311:     int c, e, i, w, s, j, n;
+[v _c `i ~T0 @X0 1 a ]
+[v _e `i ~T0 @X0 1 a ]
+[v _i `i ~T0 @X0 1 a ]
+[v _w `i ~T0 @X0 1 a ]
+[v _s `i ~T0 @X0 1 a ]
+[v _j `i ~T0 @X0 1 a ]
+[v _n `i ~T0 @X0 1 a ]
+"312
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 312:  _Bool d, hex;
+[v _d `a ~T0 @X0 1 a ]
+[v _hex `a ~T0 @X0 1 a ]
+"315
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 315:     skipws(fp);
+[e ( _skipws (1 _fp ]
+"318
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 318:     w = width ? width : sizeof(dbuf) - 1;
+[e = _w -> ? != _width -> 0 `i : -> _width `ui - -> # _dbuf `ui -> -> 1 `i `ui `i ]
+"319
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 319:     n = w < (sizeof(dbuf) - 1) ? w : sizeof(dbuf) - 1;
+[e = _n -> ? < -> _w `ui - -> # _dbuf `ui -> -> 1 `i `ui : -> _w `ui - -> # _dbuf `ui -> -> 1 `i `ui `i ]
+"320
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 320:     s = e = i = 0;
+[e = _s = _e = _i -> 0 `i ]
+"321
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 321:  hex = d = s = 0;
+[e = _hex = _d -> = _s -> 0 `i `a ]
+"322
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 322:     while (i < n) {
+[e $U 25  ]
+[e :U 26 ]
+{
+"323
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 323:         c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"324
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 324:         if (c == (-1) && (width || i==0)) {
+[e $ ! && == _c -U -> 1 `i || != _width -> 0 `i == _i -> 0 `i 28  ]
+{
+"325
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 325:             return c;
+[e ) _c ]
+[e $UE 24  ]
+"326
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 326:         }
+}
+[e :U 28 ]
+"327
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 327:         if (!s && ((c == '+') || (c == '-'))) {
+[e $ ! && ! != _s -> 0 `i || == -> _c `ui -> 43 `ui == -> _c `ui -> 45 `ui 29  ]
+{
+"329
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 329:             if (!(i == 0 || i == e)) {
+[e $ ! ! || == _i -> 0 `i == _i _e 30  ]
+{
+"330
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 330:                 ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"331
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 331:                 break;
+[e $U 27  ]
+"332
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 332:             }
+}
+[e :U 30 ]
+"333
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 333:             s = 1;
+[e = _s -> 1 `i ]
+"334
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 334:             dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"335
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 335:             ++i;
+[e =+ _i -> 1 `i ]
+"336
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 336:             ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"337
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 337:             continue;
+[e $U 25  ]
+"338
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 338:         }
+}
+[e :U 29 ]
+"339
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 339:         if (!d && (c == '.')) {
+[e $ ! && ! != -> _d `i -> 0 `i == -> _c `ui -> 46 `ui 31  ]
+{
+"341
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 341:             if (e) {
+[e $ ! != _e -> 0 `i 32  ]
+{
+"342
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 342:                 ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"343
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 343:                 break;
+[e $U 27  ]
+"344
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 344:             }
+}
+[e :U 32 ]
+"345
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 345:             d = 1;
+[e = _d -> -> 1 `i `a ]
+"346
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 346:             dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"347
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 347:             ++i;
+[e =+ _i -> 1 `i ]
+"348
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 348:             ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"349
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 349:             continue;
+[e $U 25  ]
+"350
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 350:         }
+}
+[e :U 31 ]
+"351
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 351:         if (!e && (hex ? (((((unsigned char)((c)-'A')) < 26) ? (c)|0x20 : (c)) == 'p') : (((((unsigned char)((c)-'A')) < 26) ? (c)|0x20 : (c)) == 'e'))) {
+[e $ ! && ! != _e -> 0 `i != ? != -> _hex `i -> 0 `i : -> == -> ? < -> -> - -> _c `ui -> 65 `ui `uc `i -> 26 `i : | _c -> 32 `i _c `ui -> 112 `ui `i -> == -> ? < -> -> - -> _c `ui -> 65 `ui `uc `i -> 26 `i : | _c -> 32 `i _c `ui -> 101 `ui `i -> 0 `i 33  ]
+{
+"352
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 352:             e = i + 1;
+[e = _e + _i -> 1 `i ]
+"353
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 353:             s = 0;
+[e = _s -> 0 `i ]
+"354
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 354:             dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"355
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 355:             ++i;
+[e =+ _i -> 1 `i ]
+"356
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 356:             ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"357
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 357:             continue;
+[e $U 25  ]
+"358
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 358:         }
+}
+[e :U 33 ]
+"359
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 359:         if (!e && i == s + 1 && ((((unsigned char)((c)-'A')) < 26) ? (c)|0x20 : (c)) == 'x' && dbuf[i-1] == '0') {
+[e $ ! && && && ! != _e -> 0 `i == _i + _s -> 1 `i == -> ? < -> -> - -> _c `ui -> 65 `ui `uc `i -> 26 `i : | _c -> 32 `i _c `ui -> 120 `ui == -> *U + &U _dbuf * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U _dbuf `ui `ux `ui -> 48 `ui 34  ]
+{
+"361
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 361:             hex = 1;
+[e = _hex -> -> 1 `i `a ]
+"362
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 362:             dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"363
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 363:             ++i;
+[e =+ _i -> 1 `i ]
+"364
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 364:             ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"365
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 365:             continue;
+[e $U 25  ]
+"366
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 366:         }
+}
+[e :U 34 ]
+"367
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 367:         if (!(hex ? ((((unsigned char)((c)-'0')) < 10) || ((unsigned char)((c|32) - 'a') < 6)) : (((unsigned char)((c)-'0')) < 10))) {
+[e $ ! ! != ? != -> _hex `i -> 0 `i : -> || < -> -> - -> _c `ui -> 48 `ui `uc `i -> 10 `i < -> -> - -> | _c -> 32 `i `ui -> 97 `ui `uc `i -> 6 `i `i -> < -> -> - -> _c `ui -> 48 `ui `uc `i -> 10 `i `i -> 0 `i 35  ]
+{
+"371
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 371:    j = ((((unsigned char)((c)-'A')) < 26) ? (c)|0x20 : (c));
+[e = _j ? < -> -> - -> _c `ui -> 65 `ui `uc `i -> 26 `i : | _c -> 32 `i _c ]
+"372
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 372:    if (s == i && (j == 'i' || j == 'n')) {
+[e $ ! && == _s _i || == -> _j `ui -> 105 `ui == -> _j `ui -> 110 `ui 36  ]
+{
+"373
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 373:     j = is_inf_nan(fp, (char)c, i, n);
+[e = _j ( _is_inf_nan (4 , , , _fp -> _c `uc _i _n ]
+"374
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 374:     if (j <= 0) {
+[e $ ! <= _j -> 0 `i 37  ]
+{
+"375
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 375:      break;
+[e $U 27  ]
+"376
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 376:     }
+}
+[e :U 37 ]
+"377
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 377:                 i += j;
+[e =+ _i _j ]
+"378
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 378:                 nmatch += j;
+[e =+ _nmatch _j ]
+"379
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 379:    }
+}
+[e $U 38  ]
+"380
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 380:    else {
+[e :U 36 ]
+{
+"381
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 381:     ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"382
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 382:    }
+}
+[e :U 38 ]
+"383
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 383:    break;
+[e $U 27  ]
+"384
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 384:         }
+}
+[e :U 35 ]
+"385
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 385:         dbuf[i] = (char)c;
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> _c `uc ]
+"386
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 386:         ++i;
+[e =+ _i -> 1 `i ]
+"387
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 387:         ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"388
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 388:     }
+}
+[e :U 25 ]
+"322
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 322:     while (i < n) {
+[e $ < _i _n 26  ]
+[e :U 27 ]
+"389
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 389:     dbuf[i] = '\0';
+[e = *U + &U _dbuf * -> -> _i `ui `ux -> -> # *U &U _dbuf `ui `ux -> -> 0 `ui `uc ]
+"393
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 393:  e = errno;
+[e = _e _errno ]
+"394
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 394:  errno = 0;
+[e = _errno -> 0 `i ]
+"395
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 395:     *pld = strtof(&dbuf[0],&ep);
+[e = *U _pld -> ( _strtof (2 , -> &U *U + &U _dbuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dbuf `ui `ux `*Cuc &U _ep `d ]
+"397
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 397:  d = errno != 0 && errno != 34;
+[e = _d -> -> && != _errno -> 0 `i != _errno -> 34 `i `i `a ]
+"398
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 398:  errno = e;
+[e = _errno _e ]
+"400
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 400:     return (d || !i || ep == &dbuf[0]) ? (-1) - 1 : !asup;
+[e ) ? || || != -> _d `i -> 0 `i ! != _i -> 0 `i == _ep &U *U + &U _dbuf * -> -> -> 0 `i `ui `ux -> -> # *U &U _dbuf `ui `ux : - -U -> 1 `i -> 1 `i -> ! != -> _asup `i -> 0 `i `i ]
+[e $UE 24  ]
+"401
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 401: }
+[e :UE 24 ]
+}
+"672
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 672: static int vfsfcnvrt(FILE *fp, char *fmt[], va_list ap)
+[v _vfsfcnvrt `(i ~T0 @X0 1 sf3`*S1`**uc`**v ]
+"673
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 673: {
+{
+[e :U _vfsfcnvrt ]
+"672
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 672: static int vfsfcnvrt(FILE *fp, char *fmt[], va_list ap)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _fmt `**uc ~T0 @X0 1 r2 ]
+[v _ap `**v ~T0 @X0 1 r3 ]
+"673
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 673: {
+[f ]
+"674
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 674:     char *cp, ct[3];
+[v _cp `*uc ~T0 @X0 1 a ]
+[v _ct `uc ~T0 @X0 -> 3 `i a ]
+"675
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 675:     int c, i;
+[v _c `i ~T0 @X0 1 a ]
+[v _i `i ~T0 @X0 1 a ]
+"676
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 676:     long long ll;
+[v _ll `o ~T0 @X0 1 a ]
+"677
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 677:     unsigned long long llu;
+[v _llu `uo ~T0 @X0 1 a ]
+"678
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 678:     long double f;
+[v _f `d ~T0 @X0 1 a ]
+"679
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 679:     void *vp;
+[v _vp `*v ~T0 @X0 1 a ]
+"682
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 682:     if ((*fmt)[0] == '%') {
+[e $ ! == -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `ui -> 37 `ui 40  ]
+{
+"683
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 683:         ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"685
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 685:         asup = width = 0;
+[e = _asup -> = _width -> 0 `i `a ]
+"705
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 705:         ct[0] = (char)((((unsigned char)(((int)(*fmt)[0])-'A')) < 26) ? ((int)(*fmt)[0])|0x20 : ((int)(*fmt)[0]));
+[e = *U + &U _ct * -> -> -> 0 `i `ui `ux -> -> # *U &U _ct `ui `ux -> ? < -> -> - -> -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `i `ui -> 65 `ui `uc `i -> 26 `i : | -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `i -> 32 `i -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `i `uc ]
+"706
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 706:         if (ct[0]) {
+[e $ ! != -> *U + &U _ct * -> -> -> 0 `i `ui `ux -> -> # *U &U _ct `ui `ux `i -> 0 `i 41  ]
+{
+"707
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 707:             ct[1] = (char)((((unsigned char)(((int)(*fmt)[1])-'A')) < 26) ? ((int)(*fmt)[1])|0x20 : ((int)(*fmt)[1]));
+[e = *U + &U _ct * -> -> -> 1 `i `ui `ux -> -> # *U &U _ct `ui `ux -> ? < -> -> - -> -> *U + *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x `i `ui -> 65 `ui `uc `i -> 26 `i : | -> *U + *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x `i -> 32 `i -> *U + *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x `i `uc ]
+"708
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 708:             if (ct[1]) {
+[e $ ! != -> *U + &U _ct * -> -> -> 1 `i `ui `ux -> -> # *U &U _ct `ui `ux `i -> 0 `i 42  ]
+{
+"709
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 709:                 ct[2] = (char)((((unsigned char)(((int)(*fmt)[2])-'A')) < 26) ? ((int)(*fmt)[2])|0x20 : ((int)(*fmt)[2]));
+[e = *U + &U _ct * -> -> -> 2 `i `ui `ux -> -> # *U &U _ct `ui `ux -> ? < -> -> - -> -> *U + *U _fmt * -> -> 2 `i `x -> -> # *U *U _fmt `i `x `i `ui -> 65 `ui `uc `i -> 26 `i : | -> *U + *U _fmt * -> -> 2 `i `x -> -> # *U *U _fmt `i `x `i -> 32 `i -> *U + *U _fmt * -> -> 2 `i `x -> -> # *U *U _fmt `i `x `i `uc ]
+"710
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 710:             }
+}
+[e :U 42 ]
+"711
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 711:         }
+}
+[e :U 41 ]
+"955
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 955:         if ((ct[0] == 'a') || (ct[0] == 'e') || (ct[0] == 'f') || (ct[0] == 'g')) {
+[e $ ! || || || == -> *U + &U _ct * -> -> -> 0 `i `ui `ux -> -> # *U &U _ct `ui `ux `ui -> 97 `ui == -> *U + &U _ct * -> -> -> 0 `i `ui `ux -> -> # *U &U _ct `ui `ux `ui -> 101 `ui == -> *U + &U _ct * -> -> -> 0 `i `ui `ux -> -> # *U &U _ct `ui `ux `ui -> 102 `ui == -> *U + &U _ct * -> -> -> 0 `i `ui `ux -> -> # *U &U _ct `ui `ux `ui -> 103 `ui 43  ]
+"956
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 956: 
+{
+"958
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 958:             ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"959
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 959:             i = atoaefg(fp, &f);
+[e = _i ( _atoaefg (2 , _fp &U _f ]
+"960
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 960:             if (!(i < 1)) {
+[e $ ! ! < _i -> 1 `i 44  ]
+{
+"961
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 961:                 vp = (void *)(*(float * *)__va_arg(*(float * **)ap, (float *)0));
+[e = _vp -> *U -> ( ___va_arg , (. -> *U -> _ap `***f `*v -> -> 0 `i `*f `**f `*v ]
+"962
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 962:                 *(float *)vp = (float)f;
+[e = *U -> _vp `*f -> _f `f ]
+"963
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 963:             }
+}
+[e :U 44 ]
+"964
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 964:             return i;
+[e ) _i ]
+[e $UE 39  ]
+"965
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 965:         }
+}
+[e :U 43 ]
+"966
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 966:         if (!strncmp(ct, "la", ((sizeof("le")/sizeof("le"[0]))-1)) || !strncmp(ct, "le", ((sizeof("lf")/sizeof("lf"[0]))-1)) || !strncmp(ct, "lf", ((sizeof("lf")/sizeof("lf"[0]))-1)) || !strncmp(ct, "lg", ((sizeof("lg")/sizeof("lg"[0]))-1))) {
+[e $ ! || || || ! != ( _strncmp (3 , , -> &U _ct `*Cuc :s 5C - / -> 3 `ui -> # *U + :s 6C * -> -> 0 `i `x -> -> # *U :s 6C `i `x `ui -> -> 1 `i `ui -> 0 `i ! != ( _strncmp (3 , , -> &U _ct `*Cuc :s 9C - / -> 3 `ui -> # *U + :s 10C * -> -> 0 `i `x -> -> # *U :s 10C `i `x `ui -> -> 1 `i `ui -> 0 `i ! != ( _strncmp (3 , , -> &U _ct `*Cuc :s 13C - / -> 3 `ui -> # *U + :s 14C * -> -> 0 `i `x -> -> # *U :s 14C `i `x `ui -> -> 1 `i `ui -> 0 `i ! != ( _strncmp (3 , , -> &U _ct `*Cuc :s 17C - / -> 3 `ui -> # *U + :s 18C * -> -> 0 `i `x -> -> # *U :s 18C `i `x `ui -> -> 1 `i `ui -> 0 `i 45  ]
+"969
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 969: 
+{
+"971
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 971:             i = atoaefg(fp, &f);
+[e = _i ( _atoaefg (2 , _fp &U _f ]
+"972
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 972:             if (!(i < 1)) {
+[e $ ! ! < _i -> 1 `i 46  ]
+{
+"973
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 973:                 if ((((unsigned char)(((int)(*fmt)[0])-'A')) < 26)) {
+[e $ ! < -> -> - -> -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `i `ui -> 65 `ui `uc `i -> 26 `i 47  ]
+{
+"974
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 974:                     vp = (void *)(*(long double * *)__va_arg(*(long double * **)ap, (long double *)0));
+[e = _vp -> *U -> ( ___va_arg , (. -> *U -> _ap `***d `*v -> -> 0 `i `*d `**d `*v ]
+"975
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 975:                     *(long double *)vp = f;
+[e = *U -> _vp `*d _f ]
+"976
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 976:                 } else {
+}
+[e $U 48  ]
+[e :U 47 ]
+{
+"977
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 977:                     vp = (void *)(*(double * *)__va_arg(*(double * **)ap, (double *)0));
+[e = _vp -> *U -> ( ___va_arg , (. -> *U -> _ap `***d `*v -> -> 0 `i `*d `**d `*v ]
+"978
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 978:                     *(double *)vp = (double)f;
+[e = *U -> _vp `*d -> _f `d ]
+"979
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 979:                 }
+}
+[e :U 48 ]
+"980
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 980:             }
+}
+[e :U 46 ]
+"981
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 981:             *fmt += ((sizeof("la")/sizeof("la"[0]))-1);
+[e =+ *U _fmt * -> - / -> 3 `ui -> # *U + :s 19C * -> -> 0 `i `x -> -> # *U :s 19C `i `x `ui -> -> 1 `i `ui `ux -> -> # *U *U _fmt `ui `ux ]
+"982
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 982:             return i;
+[e ) _i ]
+[e $UE 39  ]
+"983
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 983:         }
+}
+[e :U 45 ]
+"1448
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1448:         if ((*fmt)[0] == '%') {
+[e $ ! == -> *U + *U _fmt * -> -> 0 `i `x -> -> # *U *U _fmt `i `x `ui -> 37 `ui 49  ]
+{
+"1449
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1449:    skipws(fp);
+[e ( _skipws (1 _fp ]
+"1450
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1450:    c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"1451
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1451:    if (c == '%') {
+[e $ ! == -> _c `ui -> 37 `ui 50  ]
+{
+"1452
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1452:     ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1453
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1453:     ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"1454
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1454:     return 0;
+[e ) -> 0 `i ]
+[e $UE 39  ]
+"1455
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1455:    }
+}
+[e $U 51  ]
+"1456
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1456:    else if (c != (-1)) {
+[e :U 50 ]
+[e $ ! != _c -U -> 1 `i 52  ]
+{
+"1457
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1457:     ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"1458
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1458:    }
+}
+[e :U 52 ]
+[e :U 51 ]
+"1459
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1459:    return (-1) - 1;
+[e ) - -U -> 1 `i -> 1 `i ]
+[e $UE 39  ]
+"1460
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1460:         }
+}
+[e :U 49 ]
+"1463
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1463:         ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1464
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1464:         return 0;
+[e ) -> 0 `i ]
+[e $UE 39  ]
+"1465
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1465:     }
+}
+[e :U 40 ]
+"1468
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1468:     c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"1469
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1469:  if ((((*fmt[0] == ' ') || ((unsigned char)((*fmt[0])-'\t') < 5)))) {
+[e $ ! || == -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 32 `ui < -> -> - -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 9 `ui `uc `i -> 5 `i 53  ]
+{
+"1471
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1471:   do {
+[e :U 56 ]
+{
+"1472
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1472:    ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1473
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1473:   } while((((*fmt[0] == ' ') || ((unsigned char)((*fmt[0])-'\t') < 5))));
+}
+[e $ || == -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 32 `ui < -> -> - -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `ui -> 9 `ui `uc `i -> 5 `i 56  ]
+[e :U 55 ]
+"1475
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1475:   while ((((c == ' ') || ((unsigned char)((c)-'\t') < 5)))) {
+[e $U 57  ]
+[e :U 58 ]
+{
+"1476
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1476:    ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"1477
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1477:    c = fgetc(fp);
+[e = _c ( _fgetc (1 _fp ]
+"1478
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1478:   }
+}
+[e :U 57 ]
+"1475
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1475:   while ((((c == ' ') || ((unsigned char)((c)-'\t') < 5)))) {
+[e $ || == -> _c `ui -> 32 `ui < -> -> - -> _c `ui -> 9 `ui `uc `i -> 5 `i 58  ]
+[e :U 59 ]
+"1479
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1479:   if (c != (-1)) {
+[e $ ! != _c -U -> 1 `i 60  ]
+{
+"1480
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1480:    ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"1481
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1481:   }
+}
+[e :U 60 ]
+"1482
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1482:  }
+}
+[e $U 61  ]
+"1483
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1483:  else if (c == *fmt[0]) {
+[e :U 53 ]
+[e $ ! == _c -> *U *U + _fmt * -> -> 0 `i `x -> -> # *U _fmt `i `x `i 62  ]
+{
+"1484
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1484:         ++*fmt;
+[e =+ *U _fmt * -> -> 1 `i `x -> -> # *U *U _fmt `i `x ]
+"1485
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1485:         ++nmatch;
+[e =+ _nmatch -> 1 `i ]
+"1486
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1486:     } else {
+}
+[e $U 63  ]
+[e :U 62 ]
+{
+"1487
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1487:   if (c == (-1)) {
+[e $ ! == _c -U -> 1 `i 64  ]
+{
+"1488
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1488:    return (-1);
+[e ) -U -> 1 `i ]
+[e $UE 39  ]
+"1489
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1489:   }
+}
+[e :U 64 ]
+"1490
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1490:         ungetc(c, fp);
+[e ( _ungetc (2 , _c _fp ]
+"1491
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1491:         return (-1) - 1;
+[e ) - -U -> 1 `i -> 1 `i ]
+[e $UE 39  ]
+"1492
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1492:     }
+}
+[e :U 63 ]
+[e :U 61 ]
+"1494
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1494:     return 0;
+[e ) -> 0 `i ]
+[e $UE 39  ]
+"1495
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1495: }
+[e :UE 39 ]
+}
+"1497
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1497: int vfscanf(FILE *fp, const char *fmt, va_list ap)
+[v _vfscanf `(i ~T0 @X0 1 ef3`*S1`*Cuc`**v ]
+"1498
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1498: {
+{
+[e :U _vfscanf ]
+"1497
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1497: int vfscanf(FILE *fp, const char *fmt, va_list ap)
+[v _fp `*S1 ~T0 @X0 1 r1 ]
+[v _fmt `*Cuc ~T0 @X0 1 r2 ]
+[v _ap `**v ~T0 @X0 1 r3 ]
+"1498
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1498: {
+[f ]
+"1499
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1499:     char *cfmt;
+[v _cfmt `*uc ~T0 @X0 1 a ]
+"1500
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1500:     int n, saved_errno;
+[v _n `i ~T0 @X0 1 a ]
+[v _saved_errno `i ~T0 @X0 1 a ]
+"1502
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1502:     cfmt = (char *)fmt;
+[e = _cfmt _fmt ]
+"1503
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1503:     ncnv = nmatch = 0;
+[e = _ncnv = _nmatch -> 0 `i ]
+"1504
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1504:  saved_errno = errno;
+[e = _saved_errno _errno ]
+"1505
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1505:     while (*cfmt) {
+[e $U 66  ]
+[e :U 67 ]
+{
+"1506
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1506:   errno = 0;
+[e = _errno -> 0 `i ]
+"1507
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1507:         n = vfsfcnvrt(fp, &cfmt, ap);
+[e = _n ( _vfsfcnvrt (3 , , _fp &U _cfmt _ap ]
+"1508
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1508:         if (n < 0) {
+[e $ ! < _n -> 0 `i 69  ]
+{
+"1509
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1509:             break;
+[e $U 68  ]
+"1510
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1510:         }
+}
+[e :U 69 ]
+"1511
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1511:         ncnv += n;
+[e =+ _ncnv _n ]
+"1512
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1512:     }
+}
+[e :U 66 ]
+"1505
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1505:     while (*cfmt) {
+[e $ != -> *U _cfmt `i -> 0 `i 67  ]
+[e :U 68 ]
+"1513
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1513:  errno = saved_errno;
+[e = _errno _saved_errno ]
+"1514
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1514:     if (n == (-1) && ncnv == 0) {
+[e $ ! && == _n -U -> 1 `i == _ncnv -> 0 `i 70  ]
+{
+"1515
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1515:         return n;
+[e ) _n ]
+[e $UE 65  ]
+"1516
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1516:     }
+}
+[e :U 70 ]
+"1518
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1518:     return ncnv;
+[e ) _ncnv ]
+[e $UE 65  ]
+"1519
+[; ;c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\sources\c99\common\doscan.c: 1519: }
+[e :UE 65 ]
+}
+[a 2C 110 97 110 0 ]
+[a 15C 108 103 0 ]
+[a 16C 108 103 0 ]
+[a 17C 108 103 0 ]
+[a 18C 108 103 0 ]
+[a 1C 105 110 102 0 ]
+[a 8C 108 102 0 ]
+[a 10C 108 102 0 ]
+[a 11C 108 102 0 ]
+[a 12C 108 102 0 ]
+[a 13C 108 102 0 ]
+[a 14C 108 102 0 ]
+[a 4C 108 101 0 ]
+[a 6C 108 101 0 ]
+[a 7C 108 101 0 ]
+[a 9C 108 101 0 ]
+[a 3C 108 97 0 ]
+[a 5C 108 97 0 ]
+[a 19C 108 97 0 ]

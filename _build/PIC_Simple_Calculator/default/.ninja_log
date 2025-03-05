@@ -1,0 +1,44 @@
+# ninja log v6
+1181	5147	7619229294283896	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/dist/default/debug/PIC_Simple_Calculator.hex	4608d6cd037244b1
+2	1317	7616650938649783	CMakeFiles/PIC_Simple_Calculator_default_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	72decc108eee4a11
+1093	3546	7612716552793770	PIC_Simple_Calculator_default_default.elf	fc0263ff9181544e
+1110	4742	7619508616242326	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1181	5147	7619229294283896	PIC_Simple_Calculator_default_PIC_Simple_Calculator.hex	4608d6cd037244b1
+7	1108	7619508569160005	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1110	4742	7619508616242326	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+7	4527	7620002810456167	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+4528	11442	7620002924516478	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+4528	11442	7620002924516478	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+10	1185	7620009299926988	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1186	5289	7620009352444323	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1186	5289	7620009352444323	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+7	1238	7620010535790781	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1239	5264	7620010588138110	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1239	5264	7620010588138110	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+8	1089	7620012106348413	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1091	5152	7620012157541664	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1091	5152	7620012157541664	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+9	1123	7620012289305263	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1124	4819	7620012337118232	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1124	4819	7620012337118232	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+7	1130	7620017087823522	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1131	5390	7620017141396096	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1131	5390	7620017141396096	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+8	1015	7620018243465549	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1016	4992	7620018293053472	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1016	4992	7620018293053472	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+9	1138	7620072626006800	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1139	5287	7620072678509143	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1139	5287	7620072678509143	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+7	1146	7620073727298410	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1147	5119	7620073778155655	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1147	5119	7620073778155655	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+8	1179	7620077756662549	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1180	5232	7620077808656554	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1180	5232	7620077808656554	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+8	1107	7620080538420493	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1108	4971	7620080587770546	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1108	4971	7620080587770546	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf
+9	1059	7620081611967034	CMakeFiles/PIC_Simple_Calculator_default_default_XC8_compile.dir/C_/Users/mehna/Documents/MPlab_projects/PIC_Calculator.X/main.c.p1	e4d7d17e0d32a082
+1060	4861	7620081660201131	PIC_Simple_Calculator_default_PIC_Calculator.hex	6e19a4eb3caaa1cf
+1060	4861	7620081660201131	C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/out/PIC_Simple_Calculator/PIC_Calculator.hex	6e19a4eb3caaa1cf

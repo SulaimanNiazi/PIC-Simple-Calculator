@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/mehna/Documents/MPlab projects/PIC Calculator.X/_build/PIC_Simple_Calculator/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v3.00\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F877A__ -c -mcpu=16F877A -mdfp=C:/Users/mehna/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -moscval=0x3400 -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits -std=c99 -gcoff -mstack=compiled:auto:auto:auto -o CMakeFiles\\PIC_Simple_Calculator_default_default_XC8_compile.dir\\C_\\Users\\mehna\\Documents\\MPlab_projects\\PIC_Calculator.X\\main.c.p1 -c \"C:\\Users\\mehna\\Documents\\MPlab projects\\PIC Calculator.X\\main.c\"",
+  "file": "C:\\Users\\mehna\\Documents\\MPlab projects\\PIC Calculator.X\\main.c",
+  "output": "CMakeFiles\\PIC_Simple_Calculator_default_default_XC8_compile.dir\\C_\\Users\\mehna\\Documents\\MPlab_projects\\PIC_Calculator.X\\main.c.p1"
+}
+]
